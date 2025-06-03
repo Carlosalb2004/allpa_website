@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>ALLPA Especialistas en Soluciones Ambientales</title>	
+
+		<meta name="keywords" content="WebSite Template" />
+		<meta name="description" content="Porto - Multipurpose Website Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="imgallpa/Imagen2.png" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="imgallpa/Imagen2.png">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+		<!-- Web Fonts  -->
+		<!-- <link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap" rel="stylesheet" type="text/css"> -->
+
+		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap" rel="stylesheet" type="text/css">
+
+
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" href="vendor/animate/animate.compat.css">
+		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="css/theme.css">
+		<link rel="stylesheet" href="css/theme-elements.css">
+		<link rel="stylesheet" href="css/theme-blog.css">
+		<link rel="stylesheet" href="css/theme-shop.css">
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
+
+		<!-- Skin CSS -->
+		<link id="skinCSS" rel="stylesheet" href="css/skins/default.css">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Head Libs -->
+		<script src="vendor/modernizr/modernizr.min.js"></script>
+
+	</head>
+	<!-- <body id="body" class="one-page" data-plugin-scroll-spy data-plugin-options="{'target': '#header'}">
+	-->
+	<body id="body" class="loading-overlay-showing one-page" data-plugin-scroll-spy data-loading-overlay data-plugin-options="{'hideDelay': 500, 'effect': 'floatRings', 'target': '#header'}">
+		<div class="loading-overlay">
+		   <div class="bounce-loader">
+				<div class="cssload-float-rings-loader">
+					<div class="cssload-float-rings-inner cssload-one"></div>
+					<div class="cssload-float-rings-inner cssload-two"></div>
+					<div class="cssload-float-rings-inner cssload-three"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="body">
+			
+
+			<header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
+				<div class="header-body border-top-0 bg-dark box-shadow-none">
+					<div class="header-container container">
+						<div class="header-row">
+							<div class="header-column">
+								<div class="header-row">
+									<div class="header-logo">
+										<a href="index.html">
+											<img alt="Allpa" width="82" height="62" src="imgallpa/LOGOBLANCOS.png">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="header-column justify-content-end">
+								<div class="header-row">
+									<div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
+										<div class="header-nav-main header-nav-main-font-lg header-nav-main-font-lg-upper-2 header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
+											<nav class="collapse">
+												<ul class="nav nav-pills" id="mainNav">
+													<li class="dropdown">
+														<a data-hash class="nav-link " href="index.html">
+															INICIO
+														</a>
+														<!--
+														<ul class="dropdown-menu">
+															<li><a class="nav-link" href="index-classic.html">Default Home</a></li>
+															<li><a class="nav-link" href="index-one-page.html">One Page Website</a></li>
+														</ul>
+														-->
+													</li>
+													<li>
+														<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#esencia">Esencia</a>
+													</li>
+													<li>
+														<a class="nav-link active" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#services">Servicios</a>
+													</li>
+													<li>
+														<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#projects">Educación</a>
+													</li>
+													<li>
+														<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#clients">Clientes</a>
+													</li>
+													<li>
+														<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#team">Nuestro Logros</a>
+													</li>
+													<li>
+														<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#contact">Contáctanos </a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+										<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+											<i class="fas fa-bars"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div role="main" class="main">
+				 
+				<section class=" owl-item position-relative overlay overlay-show overlay-op-8 pt-5  section section-concept section-no-border section-dark section-angled section-angled-reverse pt-5 m-0" style="background-image: url(imgallpa/IMG_6516_2.JPG); background-size: cover; background-position: center; min-height: 645px;">
+
+					
+					<div class="section-angled-layer-bottom section-angled-layer-increase-angle bg-light" style="padding: 8rem 0;"></div>
+					<div class="container pt-lg-5 mt-5">
+						<div class="row pt-3 pb-lg-0 pb-xl-0">
+							<div class="col-lg-6 pt-4 mb-5 mb-lg-0">
+								<div class="appear-animation" data-appear-animation="fadeInUpShorter">
+								<ul class="breadcrumb font-weight-semibold text-4 negative-ls-1">
+									<li><a href="index.html">Inicio</a></li>
+									<li class="text-color-primary"><a href="elements.html">Servicios</a></li>
+									
+								</ul>
+								<h1 class="font-weight-bold text-10 text-xl-12 line-height-2 mb-3">Nuestros Servicios</h1>
+								<p class="opacity-7 text-4 negative-ls-05 pb-2 mb-4">"Descubre la amplia gama de servicios especializados que ofrecemos, diseñados para brindar soluciones ambientales integrales y sostenibles, adaptados a tus necesidades."</p>
+								<a href="#examples" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-gradient-primary border-primary btn-effect-4 font-weight-semi-bold px-4 btn-py-2 text-3">Ver Servicios<i class="fas fa-arrow-down ms-1"></i></a>
+								</div>
+
+						</div>
+					</div>
+				</div>
+				</section>
+				
+
+				<div id="examples" class="container py-2">
+
+					
+					<div class="row">
+						<div class="col">
+							<div class="appear-animation" data-appear-animation="fadeInUpShorter">
+							<h4 class="mb-4 text-6">Servicios Ambientales</h4></div>
+
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="appear-animation" data-appear-animation="fadeInUpShorter">
+									<div class="tabs tabs-vertical tabs-left tabs-navigation">
+										<ul class="nav nav-tabs col-sm-3">
+											<li class="nav-item">
+												<a class="nav-link active" href="#tabsNavigation1" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Monitoreos Ambientales</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation2" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Saneamiento Ambiental</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation3" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Estudios Ambientales</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation4" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Estudios y Monitoreos Biológicos</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation5" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Modelamientos Ambientales</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation6" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Instrumentos de Gestión Ambiental</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation7" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Participación Ciudadana</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation8" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Sistema Integrado de Gestión</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation9" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Capacitaciones Ambientales</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation10" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Fiscalización Ambiental</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#tabsNavigation11" data-bs-toggle="tab">
+													<i class="fas fa-leaf"></i> Elaboración y Ejecución de Proyectos</a>
+											</li>
+										</ul>
+									</div>
+									</div>
+								</div>
+								<div class="col-lg-8">
+								<div class="appear-animation" data-appear-animation="fadeInLeftShorter" >
+								
+									<div class="tab-pane tab-pane-navigation active" id="tabsNavigation1" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Monitoreos Ambientales</h4>
+										<!-- <img class="float-end" width="200" src="img/device.png" alt=""> -->
+										<p>ALLPA E.S.A. S.A.C. brinda el servicio de monitoreos ambientales, realizando el muestreo siguiendo todos los procedimientos según normativa, realizado por personal calificado y con experiencia, los análisis de muestras se realizan a base de métodos acreditados por INACAL; elaborando los informes respectivos y evaluando que los parámetros analizados no excedan, evitando el riesgo a la salud humana y el medio ambiente:</p>
+										
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Monitoreo de Calidad de Aire.</li>
+											<li><i class="fas fa-seedling"></i> Monitoreo de Calidad de Agua.</li>
+											<li><i class="fas fa-seedling"></i> Monitoreo de Efluentes Líquidos (LMP/VMA).</li>
+											<li><i class="fas fa-seedling"></i> Monitoreos de Suelos.</li>
+											<li><i class="fas fa-seedling"></i> Monitoreo de Ruido.</li>
+											<li><i class="fas fa-seedling"></i> Monitoreo de Radiaciones no Ionizantes (Baja Frecuencia).</li>
+											<li><i class="fas fa-seedling"></i> Monitoreo Meteorológico.</li>
+											<li><i class="fas fa-seedling"></i> Monitoreo de Vibraciones.</li>
+										</ul>
+
+									</div>
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation2" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Saneamiento Ambiental</h4>
+										<p>ALLPA E.S.A. S.A.C. cuenta con un equipo de expertos profesionales en Saneamiento, cuenta con la experiencia necesaria para la realización de los diversos proyectos aplicados en esta área:</p>
+										
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Elaboración de estudios, informes de agua potable y/o alcantarillado.</li>
+											<li><i class="fas fa-seedling"></i> Elaboración de Diagnostico por Análisis de riesgos de sistema de abastecimiento de agua.</li>
+											<li><i class="fas fa-seedling"></i> Elaboración de diseños de proyectos de sistemas de tratamiento de aguas residuales.</li>
+											<li><i class="fas fa-seedling"></i> Elaboración de proyectos de instalaciones sanitarias de agua y desagüe.</li>
+											<li><i class="fas fa-seedling"></i> Elaboración de diseño, proyectos de piscinas privadas y de uso público.</li>
+											<li><i class="fas fa-seedling"></i> Expedientes para autorización de vertimientos de aguas residuales domésticas tratadas.</li>
+											<li><i class="fas fa-seedling"></i> Expedientes para autorización de vertimientos de aguas residuales industriales tratadas.</li>
+											<li><i class="fas fa-seedling"></i> Autorización de reuso de aguas residuales domésticas tratadas.</li>
+											<li><i class="fas fa-seedling"></i> Autorización de reuso de aguas residuales industriales tratadas.</li>
+											<li><i class="fas fa-seedling"></i> Autorización Sanitaria de Sistemas de Tratamiento de Agua Potable.</li>
+											<li><i class="fas fa-seedling"></i> Autorización Sanitaria de Tanque Séptico e infiltración en el terreno.</li>
+											<li><i class="fas fa-seedling"></i> Diseño de plantas de Tratamiento de Agua Potable para zonas rurales y urbanas.</li>
+											<li><i class="fas fa-seedling"></i> Opinión Técnica Favorable para el otorgamiento de Autorización de Vertimiento y/o Reuso de Aguas Residuales. Industriales Tratadas.</li>
+											<li><i class="fas fa-seedling"></i> Opinión Técnica Favorable del Sistema de Tratamiento y Disposición Sanitaria de Aguas Residuales Domésticas.</li>
+											<li><i class="fas fa-seedling"></i> Caracterización de residuos sólidos.</li>
+											<li><i class="fas fa-seedling"></i> Diseño de Relleno sanitario y de Seguridad.</li>
+											<li><i class="fas fa-seedling"></i> Limpieza y desinfección de Tanques, Reservorios, Cisternas, Piscinas.</li>
+											<li><i class="fas fa-seedling"></i> Limpieza y desinfección de Pozos Sépticos y Trampas de grasa.</li>
+											<li><i class="fas fa-seedling"></i> Limpieza de tuberías en el marco del cumplimiento del DS.021-2009-VIVIENDA cumplimiento de los VMA.</li>
+											<li><i class="fas fa-seedling"></i> Plan integral de gestión ambiental de residuos sólidos (PIGARS).</li>
+											<li><i class="fas fa-seedling"></i> Programa de Adecuación y Manejo Ambiental (PAMA) para infraestructuras de transferencia, tratamiento y disposición final de residuos sólidos.</li>
+											<li><i class="fas fa-seedling"></i> Programa de Adecuación y Manejo Ambiental (PAMA) de Instalaciones de Comercialización de Residuos Sólidos.</li>
+											<li><i class="fas fa-seedling"></i> Proyectos de Infraestructura de Tratamiento y Disposición Final de Residuos Sólidos del ámbito de la gestión no municipal.</li>
+											<li><i class="fas fa-seedling"></i> Opinión técnica favorable de Proyectos de Infraestructura de Transferencia, Tratamiento y Disposición Final de Residuos Sólidos del Ámbito de la Gestión Municipal.</li>
+											<li><i class="fas fa-seedling"></i> Plan de Recuperación de Áreas Degradadas por Residuos Sólidos.</li>
+											<li><i class="fas fa-seedling"></i> Proyectos para Comercialización de Residuos Sólidos.</li>
+											<li><i class="fas fa-seedling"></i> Plan de Manejo de Residuos de Aparatos Eléctricos y Electrónicos (RAEE).</li>
+											<li><i class="fas fa-seedling"></i> Expedientes para Autorizaciones Sanitarias (DIGESA).</li>
+											
+										</ul>
+
+									</div>
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation3" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Estudios Ambientales</h4>
+										<p>El servicio de ALLPA E.S.A. S.A.C. en materia de Estudios ambientales, consta de mediciones de campo, muestreo en base a procedimientos estandarizados y análisis con métodos acreditados:</p>
+										
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Estudios Hidrogeológicos.</li>
+											<li><i class="fas fa-seedling"></i> Estudios Hidrológicos.</li>
+											<li><i class="fas fa-seedling"></i> Estudios Geoquímicos.</li>
+											<li><i class="fas fa-seedling"></i> Estudios de Evaluación Arqueológica.</li>
+										</ul>
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation4" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Estudios y Monitoreos Biológicos</h4>
+										<p>ALLPA E.S.A. S.A.C. está comprometida en proveer este servicio con el fin de contribuir con el cuidado de las especies hidrobiológicas, especies amenazadas de flora silvestre, fauna y conservación de los componentes paisajísticos de un territorio, contando para ello con un grupo de profesionales, cuya experiencia reside en múltiples y diversos trabajos de campo y gabinete, garantizando el éxito de nuestro trabajo:</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Monitoreo Hidrobiológico: Fitoplancton, Zooplancton, Perifiton y Bentos.</li>
+											<li><i class="fas fa-seedling"></i> Inventario: Especies de Flora.</li>
+											<li><i class="fas fa-seedling"></i> Inventario: Especies de Fauna (Invertebrados, Mamíferos, Anfibios, Reptiles, Aves y Peces).</li>
+											<li><i class="fas fa-seedling"></i> Monitoreo de Especies Amenazadas.</li>
+											<li><i class="fas fa-seedling"></i> Planes de Manejo Forestal.</li>
+										</ul>
+									</div>
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation5" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Modelamientos Ambientales</h4>
+										<p>ALLPA E.S.A. S.A.C. ofrece a las organizaciones la elaboración de modelaciones ambientales con el objetivo de brindar una consultoría ambiental integral, utilizando los softwares más eficientes del mercado, útil para la evaluación de impactos ambientales, delimitación de área de influencia, toma de decisiones técnicas y operativas:</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Modelamiento de Dispersión de Contaminantes.</li>
+											<li><i class="fas fa-seedling"></i> Modelamiento de Zona de Mezcla para autorización de Vertimiento de Agua.</li>
+											<li><i class="fas fa-seedling"></i> Modelación de Calidad de Aire (Atmosférica).</li>
+											<li><i class="fas fa-seedling"></i> Modelación de Calidad del Agua.</li>
+											<li><i class="fas fa-seedling"></i> Modelación Hidrológica.</li>
+										</ul>
+									</div>
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation6" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Instrumentos de Gestión Ambiental </h4>
+										<p>Nuestro objetivo es la elaboración de instrumentos de gestión ambiental para la obtención de la Certificación Ambiental de proyectos de Inversión Pública o Privada, que se encuentren dentro del marco del SEIA:</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Instrumento de Gestión Ambiental (IGA).</li>
+											<li><i class="fas fa-seedling"></i> Informe Técnico Sustentatorio (ITS).</li>
+											<li><i class="fas fa-seedling"></i> Evaluación Ambiental Preliminar (EVAP).</li>
+											<li><i class="fas fa-seedling"></i> Declaración de Impacto Ambiental (DIA).</li>
+											<li><i class="fas fa-seedling"></i> Estudio de Impacto Ambiental Semidetallado (EIAsd).</li>
+											<li><i class="fas fa-seedling"></i> Estudio de Impacto Ambiental Detallado (EIA-d).</li>
+											<li><i class="fas fa-seedling"></i> Programa de Adecuación y Manejo Ambiental (PAMA).</li>
+											<li><i class="fas fa-seedling"></i> Informe Anual Ambiental (IAA).</li>
+											<li><i class="fas fa-seedling"></i> Declaración de Adecuación Ambiental (DAA).</li>
+											<li><i class="fas fa-seedling"></i> Elaboración de Ficha Informativa de Clasificación Ambiental (FICA).</li>
+											<li><i class="fas fa-seedling"></i> Estudios de Evaluación Ambiental Estratégica (EAE).</li>
+											<li><i class="fas fa-seedling"></i> IGAFOM (Actividades de Pequeña Minería y minería Artesanal).</li>
+											<li><i class="fas fa-seedling"></i> Certificado de Inexistencia de Restos Arqueológicos (CIRA).</li>
+											<li><i class="fas fa-seedling"></i> Certificado de Compatibilidad emitido por el Servicio Nacional de Áreas Naturales Protegidas (SERNANP).</li>
+										</ul>
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation7" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Participación Ciudadana</h4>
+										<p>ALLPA E.S.A. S.A.C. cuenta con especialistas en establecer un nivel de conocimiento estandarizado, para su aplicación en estrategias que busquen armonizar el desarrollo local, la preservación del medio ambiente y el éxito de los proyectos, mejorando la partición de las comunidades y de sus autoridades en los temas ambientales frente a inversiones, despejando la desconfianza y temores, mediante mecanismos que permitan conocer los impactos y las medidas asumidas:</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Solución de Conflictos Sociales.</li>
+											<li><i class="fas fa-seedling"></i> Plan de Relaciones Comunitarias.</li>
+											<li><i class="fas fa-seedling"></i> Solución de Conflictos Socioambientales.</li>
+											<li><i class="fas fa-seedling"></i> Audiencias Públicas.</li>
+										</ul>
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation8" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Sistema Integrado de Gestión</h4>
+										
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Sistema de Gestión de Calidad (ISO 9001).</li>
+											<li><i class="fas fa-seedling"></i> Sistema de Gestión Ambiental (ISO 14001).</li>
+											<li><i class="fas fa-seedling"></i> Sistema de Gestión de Seguridad y Salud en el trabajo (ISO 45001).</li>
+											<li><i class="fas fa-seedling"></i> Sistema de Gestión Antisoborno (ISO 37001).</li>
+											<li><i class="fas fa-seedling"></i> Sistema de Gestión de Seguridad de la Información (ISO 27001).</li>
+											<li><i class="fas fa-seedling"></i> Sistema de Gestión de Seguridad y Salud Ocupacional basado en la Ley 29783.</li>
+											<li><i class="fas fa-seedling"></i> Sistema HACCP (Análisis de Peligros y Puntos Críticos de Control).</li>
+											<li><i class="fas fa-seedling"></i> BPM (Buenas Prácticas de Manufactura).</li>
+											<li><i class="fas fa-seedling"></i> Sistema de Gestión en Control y Seguridad (BASC).</li>
+											<li><i class="fas fa-seedling"></i> Implementación del Sistema de Gestión de Seguridad y Salud en el Trabajo según la Ley 29783 / D.S. lb024-2016-EM y su modificatoria D.S.023 – 2017 / D.S. lb005-2012 TR/ D.S. 006-2014 TR.</li>
+											<li><i class="fas fa-seedling"></i> Sistemas de Gestión de la Calidad e Inocuidad Alimentaria: BRC, SQF, ISO 22000.</li>
+											<li><i class="fas fa-seedling"></i> Homologaciones para ser proveedor.</li>
+										</ul>
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation9" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Capacitaciones Ambientales </h4>
+										
+										<ul class="list list-icons">
+											<li><i class="fas fa-seedling"></i> Sensibilización y Concientización Ambiental.</li>
+											<li><i class="fas fa-seedling"></i> Manejo de Residuos Sólidos .</li>
+											<li><i class="fas fa-seedling"></i> Capacitación Profesional en Monitoreo de: Aire, Gases, Agua, Suelo y Ruidos.</li>
+											<li><i class="fas fa-seedling"></i> Normatividad Ambiental.</li>
+											<li><i class="fas fa-seedling"></i> Capacitaciones y Asesoría en Temas de Responsabilidad Social.</li>
+										</ul>
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation10" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Fiscalización Ambiental</h4>
+										<p>Servicio de Supervisión y Fiscalización Ambiental a los Administrados (Centros Comerciales Menores, Tiendas, Hoteles y Restaurantes).</p>
+										
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="tabsNavigation11" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Elaboración y Ejecución de Proyectos</h4>
+										<p>ALLPA E.S.A. S.A.C. los acompaña en la elaboración de todos los planes e instrumentos necesarios para la mitigación de los efectos negativos generados hacia el medio ambiente conforme a la normatividad vigente y los estándares de la empresa, logrando que los proyectos se desarrollen de manera sustentable con el medio ambiente.</p>
+										
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="row" class="appear-animation" data-appear-animation="fadeInUpShorter">
+						<div class="col">
+							<hr class="solid my-5">
+							
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col" >
+							<h4 class="mb-4 text-6" class="appear-animation" data-appear-animation="fadeInUpShorter">
+								Servicio Integrales</h4>
+
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="tabs tabs-vertical tabs-left tabs-navigation" class="appear-animation" data-appear-animation="fadeInUpShorter">
+										<ul class="nav nav-tabs col-sm-3">
+											<li class="nav-item">
+												<a class="nav-link active" href="#SItabsNavigation1" data-bs-toggle="tab">
+													<i class="fas fa-graduation-cap"></i> Educación</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation10" data-bs-toggle="tab">
+													<i class="fas fa-building-columns"></i> Proyectos de Investigación</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation2" data-bs-toggle="tab">
+													<i class="fas fa-computer"></i> Transformación Digital</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation3" data-bs-toggle="tab">
+													<i class="fas fa-compass-drafting"></i> Arquitectura</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation4" data-bs-toggle="tab">
+													<i class="fas fa-mountain-sun"></i> Estudios Geológicos</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation5" data-bs-toggle="tab">
+													<i class="fas fa-person-digging"></i> Arqueología</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation6" data-bs-toggle="tab">
+													<i class="fas fa-fish-fins"></i> Pesquero</a>
+											</li>
+											
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation7" data-bs-toggle="tab">
+													<i class="fas fa-helmet-safety"></i> Seguridad y Salud Ocupacional</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation8" data-bs-toggle="tab">
+													<i class="fas fa-people-roof"></i> Monitoreos Ocupacionales</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#SItabsNavigation9" data-bs-toggle="tab">
+													<i class="fas fa-truck-pickup"></i> Alquiler de vehículos</a>
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-8">
+									<div class="tab-pane tab-pane-navigation active" id="SItabsNavigation1" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Ofertas Educativas</h4>
+										<!-- <img class="float-end" width="200" src="img/device.png" alt=""> -->
+										<p>Sumérgete en nuestros cursos y talleres innovadores, donde combinamos la tecnología de vanguardia con la excelencia académica para brindarte una experiencia educativa única.</p>
+										
+										<ul class="list list-icons">
+											<li><i class="fas fa-user-graduate"></i> Cursos de Actualización.</li>
+											<li><i class="fas fa-user-graduate"></i> Cursos de Especialización.</li>
+											<li><i class="fas fa-user-graduate"></i> Capacitaciones.</li>
+											<li><i class="fas fa-user-graduate"></i> Webinars.</li>
+											<li><i class="fas fa-user-graduate"></i> Diplomados.</li>
+											<li><i class="fas fa-user-graduate"></i> Seminarios.</li>
+											<li><i class="fas fa-user-graduate"></i> Talleres.</li>
+										</ul>
+									
+
+									</div>
+
+
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation10" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										
+										<!-- <img class="float-end" width="200" src="img/device.png" alt=""> -->
+										
+										<h4>Proyectos de Investigación</h4>
+
+										<p>"En Allpa Especialistas en Soluciones Ambientales, estamos comprometidos en brindar un completo servicio de asesorías en tesis y cursos especializados en el campo de la Ingeniería Ambiental. Nuestro equipo de expertos ofrece un acompañamiento personalizado y profesional para ayudarte a desarrollar y completar exitosamente tu proyecto de tesis. Ya sea que necesites asesoría en la selección de temas, el diseño de la investigación, el análisis de resultados o la interpretación de datos, estamos aquí para guiarte en cada paso del proceso. Además, ofrecemos cursos diseñados específicamente para apoyarte en la realización de tu tesis, proporcionando herramientas y conocimientos clave para llevar a cabo una investigación sólida y enfocada en temas ambientales. Con nuestra amplia experiencia en monitoreos, estudios y proyectos relacionados con el medio ambiente, te brindamos el respaldo necesario para que alcances tus objetivos académicos con éxito."</p>
+										
+										<p>A continuación, te presento una lista de los servicios que podemos ofrecer en el ámbito de las asesorías en tesis y cursos para hacer tesis enfocados en ingeniería ambiental:</p>
+
+
+										<ul class="list list-icons">
+											<li><i class="fas fa-award"></i> Asesoría en la selección de temas de investigación para tesis en ingeniería ambiental.</li>
+											<li><i class="fas fa-award"></i> Diseño y desarrollo de proyectos de tesis enfocados en temas ambientales.</li>
+											<li><i class="fas fa-award"></i> Acompañamiento y asesoramiento en el desarrollo de monografías y trabajos académicos.</li>
+											<li><i class="fas fa-award"></i> Análisis y asesoramiento en la recopilación de datos y obtención de resultados.</li>
+											<li><i class="fas fa-award"></i> Interpretación y análisis estadístico de los datos recolectados.</li>
+											<li><i class="fas fa-award"></i> Acompañamiento en la redacción y estructuración de la tesis.</li>
+											<li><i class="fas fa-award"></i> Revisión y corrección de estilo, formato y redacción técnica.</li>
+											<li><i class="fas fa-award"></i> Cursos especializados en metodología de investigación ambiental.</li>
+											<li><i class="fas fa-award"></i> Capacitación en herramientas y software estadístico para el análisis de datos.</li>
+											<li><i class="fas fa-award"></i> Asesoramiento en la presentación y defensa de la tesis.</li>
+											<li><i class="fas fa-award"></i> Orientación en los pasos y procesos para la elaboración de una tesis exitosa.</li>
+											<li><i class="fas fa-award"></i> Asesoramiento y apoyo en la obtención de resultados significativos para la investigación.</li>
+											<li><i class="fas fa-award"></i> Realización de estudios y monitoreos específicos para tesis en ingeniería ambiental.</li>
+											<li><i class="fas fa-award"></i> Acompañamiento y análisis en trabajos y proyectos de investigación relacionados con el medio ambiente.</li>
+										</ul>
+
+										<p>Estos servicios están diseñados para brindarte el apoyo necesario en tu proceso de tesis en ingeniería ambiental. Nuestro equipo de expertos está comprometido en guiarte y proporcionarte las herramientas necesarias para que puedas llevar a cabo una investigación sólida y exitosa. No dudes en contactarnos para obtener más información sobre nuestros servicios de asesorías en tesis y cursos para hacer tesis enfocados en ingeniería ambiental. Estaremos encantados de ayudarte en tu camino académico.</p>
+									</div>
+
+
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation2" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Servicios Tecnológicos</h4>
+										<p>Descubre nuestros servicios tecnológicos de vanguardia, diseñados para potenciar tu empresa y optimizar tus procesos. Con soluciones innovadoras y expertos en tecnología, llevamos tu negocio al siguiente nivel.</p>
+										
+										<ul class="list list-icons">
+											<li><i class="fas fa-microchip"></i> Desarrollo de software web, escritorio y móviles.</li>
+											<li><i class="fas fa-microchip"></i> Mantenimiento de software web, escritorio y móviles.</li>
+											<li><i class="fas fa-microchip"></i> Implementación de cero papel: Sistema de tramite documentario digital con firma digital para .</li>
+											<li><i class="fas fa-microchip"></i> Transformación digital en empresas y entidades estatales.</li>
+											<li><i class="fas fa-microchip"></i> Soporte Técnico Presencial y Remoto.</li>
+											<li><i class="fas fa-microchip"></i> Control Gubernamental y Control Interno.</li>
+											<li><i class="fas fa-microchip"></i> Seguridad de la información.</li>
+											<li><i class="fas fa-microchip"></i> Diagnóstico de Ciberseguridad.</li>
+											<li><i class="fas fa-microchip"></i> Peritaje Informático.</li>
+											<li><i class="fas fa-microchip"></i> Pruebas de Software.</li>
+											<li><i class="fas fa-microchip"></i> Revisión y Optimización de procedimientos.</li>
+											<li><i class="fas fa-microchip"></i> Asesoría y proveedor de productos informáticos y tecnológicos.</li>
+											<li><i class="fas fa-microchip"></i> Cableado estructurado: Asesoría, Diseño e implementación</li>
+											<li><i class="fas fa-microchip"></i> Configuración de equipos informáticos.</li>
+											<li><i class="fas fa-microchip"></i> Configuración y soporte de servidores.</li>
+											<li><i class="fas fa-microchip"></i> Capacitaciones en temas Tecnológicos.</li>
+											<li><i class="fas fa-microchip"></i> Concientización de usuarios.</li>
+											<li><i class="fas fa-microchip"></i> Marketing Digital.</li>
+											<li><i class="fas fa-microchip"></i> Asesoría en Reclamos y Apelaciones en Segunda Instancia.</li>
+										</ul>
+
+									</div>
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation3" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Servicios de Arquitectura</h4>
+										<p>Arquitectura sustentable que combina belleza y respeto al medio ambiente. Creamos soluciones innovadoras, eficientes y eco-amigables para tus proyectos residenciales y comerciales.</p>
+																				
+										<ul class="list list-icons">
+											<li><i class="fas fa-tree-city"></i> Desarrollo de expedientes de seguridad y tramites para revalidación certificación de defensa civil.</li>
+											<li><i class="fas fa-tree-city"></i> Elaboración de expedientes para licencias de funcionamiento y construcción.</li>
+											<li><i class="fas fa-tree-city"></i> Saneamiento físico legal para habilitaciones urbanas.</li>
+											<li><i class="fas fa-tree-city"></i> Elaboración de planes integrales.</li>
+											<li><i class="fas fa-tree-city"></i> Elaboración de cabidas arquitectónicas.</li>
+											<li><i class="fas fa-tree-city"></i> Supervisión de levantamientos topográficos con uso de dron y estación total.</li>
+											<li><i class="fas fa-tree-city"></i> Diseño de interiores en el sector retail.</li>
+											<li><i class="fas fa-tree-city"></i> Capacitaciones y desarrollo de talleres con metodologías Design Thinking para la innovación empresarial.</li>
+											<li><i class="fas fa-tree-city"></i> Aplicación de metodologías ágiles en el campo de la construcción.</li>
+											<li><i class="fas fa-tree-city"></i> Desarrollo de talleres para equipos de alto rendimiento en proyectos - Bajo el enfoque del PMI</li>
+											<li><i class="fas fa-tree-city"></i> Desarrollo y análisis de Planes de Desarrollo Urbano.</li>
+											<li><i class="fas fa-tree-city"></i> Elaboración de perfiles para mantenimiento de áreas verdes y pavimentos.</li>
+											<li><i class="fas fa-tree-city"></i> Elaboración de informes y verificaciones técnicas de equipamientos varios.</li>
+											<li><i class="fas fa-tree-city"></i> Mentorías y asesoramiento para startups y pequeñas microempresas.</li>
+											<li><i class="fas fa-tree-city"></i> Jurado en laboratorios de emprendimiento.</li>
+										</ul>
+
+										
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation4" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Estudios Geológicos</h4>
+										<p>Estudios geológicos precisos y confiables para una planificación y desarrollo sostenible. Nuestro equipo de expertos en geología brinda información valiosa sobre el subsuelo y los recursos naturales, garantizando la eficiencia y la mitigación de riesgos en tus proyectos.</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-earth-americas"></i> Caracterización de la compacidad o consistencia del terreno mediante la generación de perfiles de ondas compresionales (Vp) y de corte (Vs).</li>
+											<li><i class="fas fa-earth-americas"></i> Clasificación de sitio mediante el Vs30 siguiendo los criterios establecidos por la NT E.030 Diseño Sismorresistente.</li>
+											<li><i class="fas fa-earth-americas"></i> Determinación de la profundidad del estrato rocoso.</li>
+											<li><i class="fas fa-earth-americas"></i> Identificación de filtraciones y zonas saturadas en presas.</li>
+											<li><i class="fas fa-earth-americas"></i> Evaluación de zonas de deslizamientos.</li>
+											<li><i class="fas fa-earth-americas"></i> Identificación de zonas saturadas en depósitos de suelos naturales.</li>
+											<li><i class="fas fa-earth-americas"></i> Mapeo geológico de unidades rocosas con contraste de susceptibilidad magnética.</li>
+											<li><i class="fas fa-earth-americas"></i> Detección de zonas de densidad baja: depósitos de carbón, lignito, depósitos de sal, placeres, estructuras kársticas, etc.</li>
+										</ul>
+									</div>
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation5" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Servicios de Arqueología</h4>
+										<p>Descubre nuestro enfoque especializado en arqueología para proyectos de construcción, industria y minería. Brindamos soluciones ambientales comprometida con la preservación del patrimonio cultural, integramos la protección del legado histórico con las necesidades de desarrollo. Nuestro equipo de expertos ofrece servicios arqueológicos estratégicos y de alta calidad, asegurando el cumplimiento de requisitos legales y una gestión responsable de los recursos arqueológicos. Así, contribuimos a proyectos sostenibles y responsables que valoran nuestro pasado y aseguran un futuro sustentable.</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-trowel"></i> Prospección Arqueológica.</li>
+											<li><i class="fas fa-trowel"></i> Certificado de inexistencia de restos arqueológicos (CIRAs).</li>
+											<li><i class="fas fa-trowel"></i> Proyecto de Investigación Arqueológico (PIAs).</li>
+											<li><i class="fas fa-trowel"></i> Proyecto de Rescate Arqueológico (PRAs).</li>
+											<li><i class="fas fa-trowel"></i> Proyecto de Evaluación Arqueología (PEAs).</li>
+										</ul>
+									</div>
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation6" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Servicios Pesqueros</h4>
+										<p>Descubre nuestros servicios pesqueros comprometidos con la preservación del medio ambiente marino. Con enfoque en la sostenibilidad y buenas prácticas pesqueras, brindamos soluciones integrales que garantizan la conservación de los recursos acuáticos y promueven la pesca responsable. Nuestro equipo experto te acompaña en cada etapa, desde la gestión de permisos hasta la implementación de medidas de conservación, asegurando un equilibrio entre la actividad pesquera y la protección del ecosistema marino.</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-ship"></i> Capacitaciones en temas de transformación de productos, producción acuícola y desarrollo pesquero.</li>
+											<li><i class="fas fa-ship"></i> Asistencia y mecanismos de transferencia tecnológicas.</li>
+											<li><i class="fas fa-ship"></i> Mantenimientos de planta pesqueras. </li>
+											<li><i class="fas fa-ship"></i> Análisis situacional: Diagnósticos en procesos, know how, maquinaria y flujo de proceso.</li>
+											<li><i class="fas fa-ship"></i> Desarrollo de Propuestas tecnológicas y/o proyectos.</li>
+											<li><i class="fas fa-ship"></i> Formulación, Evaluación, Monitoreo, gestión, administración y cierres de proyectos bajo enfoque del pmbok.</li>
+											<li><i class="fas fa-ship"></i> Asesoría para la búsqueda e inyección de fondos externos.</li>
+											<li><i class="fas fa-ship"></i> Asesoría en manejo de conflictos en el ámbito laboral.</li>
+										</ul>
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation7" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Seguridad y Salud Ocupacional</h4>
+										<p>ALLPA E.S.A. S.A.C. en colaboración con <a href="https://ilssafework.com/" target="_blank">ILS Safework</a>, ofrece una amplia gama de servicios en seguridad y salud ocupacional, garantizando el bienestar de tus colaboradores y el cumplimiento de las normas y reglamentos vigentes. A través de nuestro convenio con <a href="https://ilssafework.com/" target="_blank">ILS Safework</a>, brindamos asesoramiento especializado y soluciones personalizadas para adaptar las actividades y el entorno laboral, asegurando la protección y seguridad de tu equipo. Confía en nosotros para promover un ambiente laboral seguro y saludable.</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-triangle-exclamation"></i> Estudios en Salud Ambiental (evaluación de riesgos ambientales).</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Sistema de gestión de seguridad y Salud en el trabajo.</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Elaboración de mapa de riesgo e IPERC.</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Gestión de Materiales Peligrosos (MATPEL).</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Elaboración de Estudios de Riesgo y Plan de Contingencia o Emergencia.</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Auditorías de diagnóstico, internas y externas.</li>
+										</ul>
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation8" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Monitoreos Ocupacionales</h4>
+										<p>ALLPA E.S.A. S.A.C., en colaboración con <a href="https://ilssafework.com/" target="_blank">ILS Safework</a>, ofrece servicios especializados en monitoreos ocupacionales, contando con un equipo de profesionales altamente calificados en gestión ocupacional y ambiental. Nuestros expertos realizan una variedad de servicios, asegurando la evaluación precisa de riesgos laborales y el cumplimiento de las normativas vigentes. A través de nuestro convenio con <a href="https://ilssafework.com/" target="_blank">ILS Safework</a>, brindamos soluciones integrales para garantizar la seguridad y el bienestar de tus colaboradores. Confía en nosotros para obtener resultados confiables y proteger la salud ocupacional en tu entorno laboral.</p>
+										<ul class="list list-icons">
+											<li><i class="fas fa-triangle-exclamation"></i> Agentes físicos: Ruidos en el trabajo por dosimetría y sonometría, iluminación, confort térmico, estrés térmico, humedad, radiación ionizante y no ionizante, vibración.</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Agentes químicos: Partículas inhalables, partículas respirables, humos metálicos, vapores, COVS y agentes tóxicos (SO2, NO, CO, H2S), entre otros.</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Agentes biológicos: Recuento de Hongos (Mohos y Levaduras), recuento de bacterias anaeróbicas mesófilas, parásitos, protozoarios, superficies inertes y vivas.</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Agentes Disergonómicos: Postura Forzada (Factores), Movimientos Repetitivos, Levantamiento de cargas, Ergonomía en Oficina.</li>
+											<li><i class="fas fa-triangle-exclamation"></i> Riesgo Psico Social: Carga de Trabajo, Organización del tiempo de trabajo.</li>
+										</ul>
+									</div>
+
+									<div class="tab-pane tab-pane-navigation" id="SItabsNavigation9" class="appear-animation" data-appear-animation="fadeInLeftShorter">
+										<h4>Servicio de Alquiler de Vehículos con Conductor</h4>
+										<h4 class="text-4">JAC T8 PRO</h4>
+										<img class="float-end" width="300" src="imgallpa/t8pro.png" alt="">
+										<p>Descubre la experiencia de viajar en un JAC T8 PRO con nuestro servicio de alquiler de autos con conductor. Este vehículo de alta gama te brinda comodidad y seguridad en cada trayecto. Disfruta de su pantalla multimedia vertical de 10.4" con Apple CarPlay y Android Auto, aros de aleación de 18" y freno de mano electrónico mientras nuestro conductor experto te lleva a tu destino. Ya sea para un viaje de negocios, un proyecto o simplemente para disfrutar de un paseo relajante, nuestro servicio de alquiler de autos con conductor te garantiza una experiencia de conducción sin preocupaciones. Reserva tu viaje en el JAC T8 PRO y déjate llevar con estilo y tranquilidad. 
+										</p>
+										<p>T8 PRO, cuenta con actualización de rango completo en estilo, comodidad, estabilidad, <b>seguridad y potencia</b>. Basada en la plataforma internacional de octava generación, con una persiana frontal agresiva y robusta con apariencia imponente y un estilo bastante aerodinámico.</p>
+										<p>JAC T8 PRO es un Pick Up perfecto para combinar el trabajo y disfrutar la vida. Atrévete a probar el poder que te da su motor Turbo Diesel Intercooler con tecnología Japonesa y su capacidad de carga de <strong>1 tonelada</strong> . Durabilidad en el trabajo, estilo y confort para tu vida, y accesible a tu presupuesto.</p>
+										<img class="float-end" width="300" src="imgallpa/T8-PRO-EXTERIOR.png" alt="">
+										<h4 class="text-4">DESCRIPCIÓN TÉCNICA</h4>
+										
+										<ul class="list list-icons">
+											<li><i class="fas fa-truck-pickup"></i> Desplazamiento: 2000 c.c.</li>
+											<li><i class="fas fa-truck-pickup"></i> Tracción: 4×4</li>
+											<li><i class="fas fa-truck-pickup"></i> No. Cilindros: 4 Cilindros en línea</li>
+											<li><i class="fas fa-truck-pickup"></i> Válvulas: 16 Válvulas</li>
+											<li><i class="fas fa-truck-pickup"></i> Potencia máxima: 136,7 hp @ 3600 rpm</li>
+											<li><i class="fas fa-truck-pickup"></i> Torque: 320 Nm @ 1600-2600 rpm</li>
+											<li><i class="fas fa-truck-pickup"></i> Inyección de Combustible: Common Rail + Geometría variable + Intercooler</li>
+											<li><i class="fas fa-truck-pickup"></i> Tipo de Combustible: Diesel (Euro IV)</li>
+											<li><i class="fas fa-truck-pickup"></i> Transmisión: 6 Velocidades adelante + reversa</li>
+										</ul>
+										
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					
+
+					
+
+					<div class="row">
+						<div class="col">
+							<hr class="solid my-5">
+						</div>
+					</div>
+
+
+				</div>
+
+		
+			</div>
+
+			<section class="section bg-primary border-0 m-0 ">
+				<div class="container">
+					<div class="row justify-content-center text-center text-lg-start py-4">
+						
+						<div class="col-lg-4  appear-animation" data-appear-animation="fadeInRightShorter">
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 ">
+								<div class="feature-box-info ps-1  ">
+									<h4 class="text-color-light font-weight-semibold text-decoration-none">Visítanos</h4>
+								</div>
+							</div>
+
+						
+
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0">
+								<div class="feature-box-icon">
+									<i class="icon-location-pin icons fa-bounce text-color-light"></i>
+								</div>
+								<div class="feature-box-info ps-1">
+									<h5 class="font-weight-semibold text-color-light mb-0">Av. Salaverry 507 Urb. Cerro Salaverry JLBR - Arequipa - Perú</h5>
+									<p class="font-weight-light text-color-light mb-0"><b>SEDE PRINCIPAL</b></p>
+									<p class="font-weight-light text-color-light mb-0">Lun a Vir: 8:00am - 5:30pm</p>
+									<p class="font-weight-light text-color-light  ">Sábado: 8:00am - 1:30pm</p>
+								</div>
+							</div>
+
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0">
+								<div class="feature-box-icon">
+									<i class="icon-location-pin icons fa-bounce text-color-light"></i>
+								</div>
+								<div class="feature-box-info ps-1">
+									<h5 class="font-weight-semibold text-color-light  mb-0">Calle San Martín LL-4, San Francisco Moquegua - Mariscal Nieto - Moquegua</h5>
+									<p class="font-weight-light text-color-light  ">Oficina Informativa</p>
+								</div>
+							</div>
+
+
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0">
+								<div class="feature-box-icon">
+									<i class="icon-location-pin icons fa-bounce text-color-light"></i>
+								</div>
+								<div class="feature-box-info ps-1">
+									<h5 class="font-weight-semibold text-color-light  mb-0">Asociación Las Vilcas, Mz-D, Lt. 03, Coronel Gregorio Albarracin Lanchipa - Tacna - Tacna</h5>
+									<p class="font-weight-light text-color-light  ">Oficina Informativa</p>
+								</div>
+							</div>
+
+							
+
+							
+						</div>
+
+
+						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">
+							
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 px-xl-4 mx-lg-5">
+								
+								<div class="feature-box-info ps-1">
+									
+									<h4 class="text-color-light font-weight-semibold text-decoration-none">Contáctanos</h4>
+								</div>
+							</div>
+							
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 px-xl-4 mx-lg-5">
+								<div class="feature-box-icon">
+									<i class="icon-call-out icons fa-fade text-color-light"></i>
+									
+								</div>
+								<div class="feature-box-info ps-1">
+									<h5 class="font-weight-light text-color-light mb-0">Llámanos</h5>
+									
+									<p class="mb-0">
+										<a href="tel:+054576573" class="text-color-light font-weight-semibold text-decoration-none" >
+											054-576 573
+										</a></p>
+									<p class="mb-0">
+										<a href="tel:+51984719504" class="text-color-light font-weight-semibold text-decoration-none" >
+											+51 984 719 504</a></p>
+									<p class="">
+										<a href="tel:+51 931 724 784" class="text-color-light font-weight-semibold text-decoration-none" >
+											+51 931 724 784</a></p>									
+								</div>
+							</div>
+
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 px-xl-4 mx-lg-5">
+								<div class="feature-box-icon">
+									<i class="fa-brands fa-whatsapp fa-fade text-color-light"></i>
+								</div>
+								<div class="feature-box-info ps-1">
+									<h5 class="font-weight-light text-color-light mb-0">Escríbenos</h5>
+									
+									<p class="mb-0">
+										<a href="https://wa.me/51932689088" target="_blank" class="text-color-light font-weight-semibold text-decoration-none" >
+											+51 932 689 088
+										</a></p>
+									<p class="">
+										<a href="https://wa.me/51950707731" target="_blank" class="text-color-light font-weight-semibold text-decoration-none" >
+											+51 950 707 731</a></p>
+																	
+								</div>
+							</div>
+							
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 px-xl-4 mx-lg-5">
+								<div class="feature-box-icon">
+									<i class="icon-envelope-open icons fa-fade text-color-light"></i>
+									
+									
+								</div>
+								<div class="feature-box-info ps-1">
+									<h5 class="font-weight-light text-color-light mb-0">Correos</h5>
+									
+									<p class="mb-0">
+										<a href="mailto:info@allpasac.com" class="text-color-light font-weight-semibold text-decoration-none" >
+											info@allpasac.com
+										</a></p>
+									<p class="">
+										<a href="mailto:logistica.operaciones@allpasac.com" class="text-color-light font-weight-semibold text-decoration-none" >
+											logistica.operaciones@allpasac.com</a></p>
+																	
+								</div>
+							</div>
+
+							
+
+
+
+						</div>
+
+
+						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="400">
+
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 ">
+								<div class="feature-box-info ps-1">
+									<h4 class="text-color-light font-weight-semibold text-decoration-none">Síguenos</h4>
+								</div>
+							</div>
+
+							
+							
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex">
+								<div class="feature-box-icon">
+									<i class="icon-share icons fa-fade text-color-light"></i>
+								</div>
+								<div class="feature-box-info ps-1">
+									
+									<!-- <p class="mb-0">
+										<span class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" class="text-color-light font-weight-semibold" title="Facebook"><i class="me-1 fab fa-facebook-f"></i> FACEBOOK</a></span>
+										<span class="social-icons-twitter ps-3"><a href="http://www.twitter.com/" target="_blank" class="text-color-light font-weight-semibold" title="Twitter"><i class="me-1 fab fa-twitter"></i> TWITTER</a></span>
+										<span class="social-icons-instagram ps-3"><a href="http://www.linkedin.com/" target="_blank" class="text-color-light font-weight-semibold" title="Linkedin"><i class="me-1 fab fa-instagram"></i> INSTAGRAM</a></span>
+									</p>-->
+
+									<ul class="social-icons social-icons-big social-icons-dark-2">
+										<li class="social-icons-facebook"><a href="https://www.facebook.com/allpaesa/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+										<li class="social-icons-instagram"><a href="https://www.instagram.com/allpaesa/" target="_blank" title="Twitter"><i class="fab fa-instagram"></i></a></li>
+										<li class="social-icons-linkedin"><a href="https://www.tiktok.com/@allpaesa" target="_blank" title="Linkedin">
+										<i class="fab fa-tiktok"></i></a></li>
+									</ul>
+
+									<h4 class="text-4 font-weight-light text-color-light   mb-0">@allpaesa</h4>
+								</div>
+							</div>
+
+
+							<div class="container  my-3 py-3">
+								<a href="##/">
+									<img src="##/" data-src="imgallpa/libro-de-reclamaciones-2020.png" width="200" height="100" 
+									class="appear-animation lazyload" alt="Porto" data-appear-animation="fadeIn" data-appear-animation-delay="300">
+								</a>
+								<p class="text-3 mb-4"> <a href="##/" class="text-color-light" target="">Libro de Reclamaciones.</a></p>
+								
+								
+							</div>
+
+							<!--
+							<div class="container text-center my-3 py-5">
+								<a href="index.html">
+									<img src="img/lazy.png" data-src="img/landing/logo.png" width="102" height="45" class="mb-4 appear-animation lazyload" alt="Porto" data-appear-animation="fadeIn" data-appear-animation-delay="300">
+								</a>
+								<p class="text-4 mb-4">Porto is exclusively available on themeforest.net by <a href="https://themeforest.net/user/okler/" class="text-color-light" target="_blank">Okler.</a></p>
+								
+							</div>-->
+
+
+						</div>
+
+
+					</div>
+				</div>
+			</section>		
+
+			
+			<footer id="footer" class="bg-color-dark-scale-2 border border-end-0 border-start-0 border-bottom-0 border-color-light-3 mt-0 ">
+				<div class="copyright bg-dark py-4 ">
+					<div class="container text-center py-2 ">
+						<p class="mb-0 text-2 text-light opacity-7"><strong>ALLPA ESA SAC</strong> - © Copyright 2023 - Todos los derechos reservados.</p>
+						<p class="mb-0 text-2 text-light opacity-7">ALLPA ESPECIALISTAS EN SOLUCIONES AMBIENTALES S.A.C. - ALLPA E.S.A. S.A.C.</p>
+						<p class="mb-0 text-2 text-light opacity-7">RUC : 20604397520</p>
+				</div>
+			</footer>
+			
+			
+		</div>
+
+	
+		<!-- Vendor -->
+		<script src="vendor/plugins/js/plugins.min.js"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="js/theme.js"></script>
+
+		<script src="js/views/view.contact.js"></script>
+
+		<!-- Theme Custom -->
+		<script src="js/custom.js"></script>
+
+		<!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>
+
+		<!-- Examples -->
+		<script src="js/examples/examples.portfolio.js"></script>
+
+		<!-- Circle Flip Slideshow Script -->
+		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+		
+		<!-- Current Page Views -->
+		<script src="js/views/view.home.js"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA9kKq-PAjPhFtLQke_lxUwsxxq90Pf54"></script>
+
+	</body>
+</html>
