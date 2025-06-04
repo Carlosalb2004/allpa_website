@@ -177,13 +177,26 @@
 				<nav class="collapse">
 					<ul class="nav nav-pills" id="mainNav">
 						<li class="dropdown">
-							<a data-hash class="nav-link active" href="#home">INICIO</a>
+						<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#home">Inicio</a>
 						</li>
-                        <li><a href="/website/index.html#esencia">Esencia</a></li>
-                        <li><a href="/website/index.html#services">Servicios</a></li>
-                        <li><a href="/website/index.html#projects">Educación</a></li>
-                        <li><a href="/website/index.html#clients">Clientes</a></li>
-                        <li><a href="/website/index.html#team">Nuestros Logros</a></li>
+						<li>
+						<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#esencia">Esencia</a>
+						</li>
+						<li>
+							<a class="nav-link active" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#services">Servicios</a>
+						</li>
+						<li>
+							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#projects">Educación</a>
+						</li>
+						<li>
+							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#clients">Clientes</a>
+						</li>
+						<li>
+							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#team">Nuestro Logros</a>
+						</li>
+						<li>
+							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#contact">Contáctanos </a>
+						</li>
 
 
 					</ul>
@@ -212,15 +225,15 @@
   <div style="height: 193px;"></div>
   
   <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-				<div id="googlemaps" class="google-map mt-0" style="height: 500px;"></div>
+			
 
 				<div class="container">
 
 					<div class="row py-4">
 						<div class="col-lg-6">
 
-							<h2 class="font-weight-bold text-8 mt-2 mb-0">Contact Us</h2>
-							<p class="mb-4">Feel free to ask for details, don't save any questions!</p>
+							<h2 class="font-weight-bold text-8 mt-2 mb-0">Contactanos</h2>
+							<p class="mb-4">Sientase libre de pedir detalles, ¡no guarde ninguna pregunta!</p>
 
 							<form class="contact-form" action="php/contact-form.php" method="POST">
 								<div class="contact-form-success alert alert-success d-none mt-4">
@@ -234,29 +247,35 @@
 
 								<div class="row">
 									<div class="form-group col-lg-6">
-										<label class="form-label mb-1 text-2">Full Name</label>
-										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required>
+										<label class="form-label mb-1 text-2">Nombre Completo</label>
+										<input type="text" value="" data-msg-required="Ingrese su nombre completo" maxlength="100" class="form-control text-3 h-auto py-2" name="name" required>
 									</div>
 									<div class="form-group col-lg-6">
-										<label class="form-label mb-1 text-2">Email Address</label>
-										<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required>
+										<label class="form-label mb-1 text-2">Correo Electrónico</label>
+										<input type="email" value="" data-msg-required="Ingrese su correo electrónico" data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col">
-										<label class="form-label mb-1 text-2">Subject</label>
-										<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
+										<label class="form-label mb-1 text-2">Telefono</label>
+										<input type="tel" value="" data-msg-required="Ingrese su número telefonico" maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col">
-										<label class="form-label mb-1 text-2">Message</label>
-										<textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+										<label class="form-label mb-1 text-2">Asunto</label>
+										<input type="text" value="" data-msg-required="Ingrese el asunto" maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col">
-										<input type="submit" value="Send Message" class="btn btn-primary btn-modern" data-loading-text="Loading...">
+										<label class="form-label mb-1 text-2">Mensaje</label>
+										<textarea maxlength="5000" data-msg-required="Ingrese su mensaje" rows="8" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col">
+										<input type="submit" value="Enviar" class="btn btn-primary btn-modern" data-loading-text="Cargando...">
 									</div>
 								</div>
 							</form>
@@ -265,26 +284,26 @@
 						<div class="col-lg-6">
 
 							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
-								<h4 class="mt-2 mb-1">Our <strong>Office</strong></h4>
+								<h4 class="mt-2 mb-1"><strong> Nuestras Sedes</strong></h4>
 								<ul class="list list-icons list-icons-style-2 mt-2">
-									<li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Address:</strong> Melbourne, 121 King St, Australia</li>
-									<li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Phone:</strong> (123) 456-789</li>
-									<li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
+									<li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Dirección:</strong> Av. Salaverry 507 URB. Cerro Salaverry, Socabaya - Arequipa - Perú</li>
+									<li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Telefono:</strong> +51 950 707 731</li>
+									<li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="gerenciacomercial@allpasac.com">gerenciacomercial@allpasac.com</a></li>
 								</ul>
 							</div>
 
 							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="950">
-								<h4 class="pt-5">Business <strong>Hours</strong></h4>
+								<h4 class="pt-5"><strong>Horarios de Trabajo</strong> </h4>
 								<ul class="list list-icons list-dark mt-2">
-									<li><i class="far fa-clock top-6"></i> Monday - Friday - 9am to 5pm</li>
-									<li><i class="far fa-clock top-6"></i> Saturday - 9am to 2pm</li>
-									<li><i class="far fa-clock top-6"></i> Sunday - Closed</li>
+									<li><i class="far fa-clock top-6"></i> Lun a Vie: 8:00am - 5:30pm</li>
+									<li><i class="far fa-clock top-6"></i> Sábado: 8:00am - 1:30pm</li>
+									<li><i class="far fa-clock top-6"></i> Domingos - Cerrado</li>
 								</ul>
 							</div>
-
+<!--
 							<h4 class="pt-5">Get in <strong>Touch</strong></h4>
 							<p class="lead mb-0 text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
+-->
 						</div>
 
 					</div>
