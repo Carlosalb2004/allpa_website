@@ -11597,6 +11597,22 @@ html body .rounded-circle {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+
+.full-width-height {
+    width: 100%;
+    height: 100vh; /* 100% de la altura de la ventana del navegador */
+    background-color: #f7f7f7; /* Gris de fondo */
+    padding: 0;  /* Eliminar el relleno interno para el fondo */
+}
+
+.call-to-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
 /* Highlighted Word */
 @keyframes pencilAnimation {
 	from {
