@@ -1,105 +1,58 @@
 <?php
-/*
-Name: 			Contact Form
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	9.9.2
-*/
-
-namespace PortoContactForm;
-
-session_cache_limiter('nocache');
-header('Expires: ' . gmdate('r', 0));
-
-header('Content-type: application/json');
-
+use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'php-mailer/src/PHPMailer.php';
-require 'php-mailer/src/SMTP.php';
-require 'php-mailer/src/Exception.php';
+require 'vendor/autoload.php';
 
-// Step 1 - Enter your email address below.
-$email = 'info@allpasac.com';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+    $telefono = isset($_POST['telefono']) ? $_POST['telefono'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $asunto = isset($_POST['asunto']) ? $_POST['asunto'] : '';
+    $mensaje = isset($_POST['mensaje']) ? $_POST['mensaje'] : '';
+    
 
-// If the e-mail is not working, change the debug option to 2 | $debug = 2;
-$debug = 0;
+    $destinatario = "pruebas3@allpasac.com";  
+    $subject = "Nuevo mensaje desde el formulario de contacto: " . $asunto;
+    $cuerpo = "Nombre: $nombre\nTeléfono: $telefono\nEmail: $email\nAsunto: $asunto\n\nMensaje:\n$mensaje";
 
-// If contact form don't has the subject input change the value of subject here
-$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'Define subject in php/contact-form.php line 29';
 
-$message = '';
+    $mail = new PHPMailer(true);
 
-foreach($_POST as $label => $value) {
-	$label = ucwords($label);
+    try {
 
-	// Use the commented code below to change label texts. On this example will change "Email" to "Email Address"
+        $mail->isSMTP();                                      
+        $mail->Host = 'mail.allpasac.com';                      
+        $mail->SMTPAuth = true;                                
+        $mail->Username = 'pruebas3@allpasac.com';             
+        $mail->Password = 'cu!KDk4[-[k%MJ,l@;';               
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;       
+        $mail->Port = 465;          
 
-	// if( $label == 'Email' ) {               
-	// 	$label = 'Email Address';              
-	// }
+        // Receptores
+        $mail->setFrom($email, $nombre);                       
+        $mail->addAddress($destinatario);                       
 
-	// Checkboxes
-	if( is_array($value) ) {
-		// Store new value
-		$value = implode(', ', $value);
-	}
+        // Asunto y cuerpo del mensaje
+        $mail->Subject = $subject;
+        $mail->Body    = $cuerpo;
+        $mail->AltBody = strip_tags($cuerpo);                   
 
-	$message .= $label.": " . nl2br(htmlspecialchars($value, ENT_QUOTES)) . "<br>";
+        // Adjuntar el archivo (si hay)
+        if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+            $file_tmp = $_FILES['file']['tmp_name'];
+            $file_name = $_FILES['file']['name'];
+            $file_type = mime_content_type($file_tmp);
+            $mail->addAttachment($file_tmp, $file_name, null, $file_type);  // Adjuntar archivo
+        }
+
+        // Enviar el correo
+        $mail->send();
+        echo "Se envió tu mensaje exitosamente.";
+    } catch (Exception $e) {
+        echo "Hubo un problema al enviar tu mensaje. Error: {$mail->ErrorInfo}";
+    }
 }
+?>
 
-$mail = new PHPMailer(true);
-
-try {
-
-	$mail->SMTPDebug = $debug;                                 // Debug Mode
-
-	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
-
-	//$mail->IsSMTP();                                         // Set mailer to use SMTP
-	//$mail->Host = 'mail.yourserver.com';				       // Specify main and backup server
-	//$mail->SMTPAuth = true;                                  // Enable SMTP authentication
-	//$mail->Username = 'user@example.com';                    // SMTP username
-	//$mail->Password = 'secret';                              // SMTP password
-	//$mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
-	//$mail->Port = 587;   								       // TCP port to connect to
-
-	$mail->AddAddress($email);	 						       // Add another recipient
-
-	//$mail->AddAddress('person2@domain.com', 'Person 2');     // Add a secondary recipient
-	//$mail->AddCC('person3@domain.com', 'Person 3');          // Add a "Cc" address. 
-	//$mail->AddBCC('person4@domain.com', 'Person 4');         // Add a "Bcc" address. 
-
-	// From - Name
-	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'Website User';
-	$mail->SetFrom($email, $fromName);
-
-	// Reply To
-	if( isset($_POST['email']) && !empty($_POST['email']) ) {
-		$mail->AddReplyTo($_POST['email'], $fromName);
-	}
-
-	$mail->IsHTML(true);                                       // Set email format to HTML
-
-	$mail->CharSet = 'UTF-8';
-
-	$mail->Subject = $subject;
-	$mail->Body    = $message;
-
-	// Step 3 - If you don't want to attach any files, remove that code below
-	if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] == UPLOAD_ERR_OK) {
-		$mail->AddAttachment($_FILES['attachment']['tmp_name'], $_FILES['attachment']['name']);
-	}
-
-	$mail->Send();
-	$arrResult = array ('response'=>'success');
-
-} catch (Exception $e) {
-	$arrResult = array ('response'=>'error','errorMessage'=>$e->errorMessage());
-} catch (\Exception $e) {
-	$arrResult = array ('response'=>'error','errorMessage'=>$e->getMessage());
-}
-
-if ($debug == 0) {
-	echo json_encode($arrResult);
-}
