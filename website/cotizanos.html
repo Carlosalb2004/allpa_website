@@ -230,7 +230,7 @@
 				<div class="container">
 
 					<div class="row py-4">
-						
+
 						<div class="col-lg-6">
 							<h2 class="font-weight-bold text-8 mt-2 mb-0">Contactanos</h2>
 							<p class="mb-4">Sientase libre de pedir detalles, ¡no guarde ninguna pregunta!</p>
@@ -248,31 +248,44 @@
 								<div class="row">
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Nombre Completo</label>
-										<input type="text" value="" data-msg-required="Por favor ingrese su nombre completo." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required>
+										<input type="text" value="" data-msg-required="Por favor ingrese su nombre completo." maxlength="100" 
+											class="form-control text-3 h-auto py-2" name="name" required 
+											oninput="validateNameInput(this)">
 									</div>
 									
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Teléfono</label>
-										<input type="tel" value="" data-msg-required="Por favor ingrese su número telefónico." maxlength="15" class="form-control text-3 h-auto py-2" name="phone" required>
+										<input type="tel" value="" data-msg-required="Por favor ingrese su número telefónico." maxlength="15" 
+											class="form-control text-3 h-auto py-2" name="phone" required 
+											oninput="validatePhoneInput(this)">
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="form-group col">
 										<label class="form-label mb-1 text-2">Correo Electrónico</label>
-										<input type="email" value="" data-msg-required="Por favor ingrese su correo electrónico." data-msg-email="Por favor ingrese una dirección de correo válida." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required>
+										<input type="email" value="" data-msg-required="Por favor ingrese su correo electrónico." 
+											data-msg-email="Por favor ingrese una dirección de correo válida." maxlength="100" 
+											class="form-control text-3 h-auto py-2" name="email" required 
+											oninput="validateEmailInput(this)">
 									</div>
 								</div>
+
 								<div class="row">
 									<div class="form-group col">
 										<label class="form-label mb-1 text-2">Asunto</label>
-										<input type="text" value="" data-msg-required="Porfavor ingrese su asunto" maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
+										<input type="text" value="" data-msg-required="Por favor ingrese su asunto" maxlength="100" 
+											class="form-control text-3 h-auto py-2" name="subject" required 
+											oninput="validateSubjectInput(this)">
 									</div>
 								</div>
+
 								<div class="row">
 									<div class="form-group col">
 										<label class="form-label mb-1 text-2">Mensaje</label>
-										<textarea maxlength="5000" data-msg-required="Porfavor ingrese su mensaje" rows="8" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+										<textarea maxlength="5000" data-msg-required="Por favor ingrese su mensaje" rows="8" 
+												class="form-control text-3 h-auto py-2" name="message" required 
+												oninput="validateMessageInput(this)"></textarea>
 									</div>
 								</div>
 
@@ -282,6 +295,41 @@
 									</div>
 								</div>
 							</form>
+							<!-- Scripts para cada validación -->
+							<script>
+	
+								function validateNameInput(input) {
+									input.value = input.value.replace(/[^A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]+/g, '');
+								}
+
+				
+								function validatePhoneInput(input) {
+									input.value = input.value.replace(/[^0-9]+/g, '');
+									if (input.value.length > 9) {
+										input.value = input.value.slice(0, 9);
+									}
+								}
+
+				
+								function validateSubjectInput(input) {
+									input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
+								}
+
+		
+								function validateMessageInput(input) {
+									input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
+								}
+
+		
+								function validateEmailInput(input) {
+									var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+									if (!emailPattern.test(input.value)) {
+										input.setCustomValidity('Por favor ingrese un correo electrónico válido.');
+									} else {
+										input.setCustomValidity(''); 
+									}
+								}
+							</script>
 						</div>
 						<div class="col-lg-6">
 
