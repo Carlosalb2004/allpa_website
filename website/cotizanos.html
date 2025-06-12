@@ -290,46 +290,46 @@
 
 								<div class="row">
 									<div class="form-group col">
-										<button type="submit" class="btn btn-primary btn-modern" id="submitButton" data-loading-text="Cargando...">Enviar Mensaje</button>
+										<button type="submit" class="btn btn-primary btn-modern" value="enviar" id="submitButton">Enviar Mensaje</button>
 									</div>
 								</div>
-							</form>
 
-							<!-- Scripts para cada validacion -->
-							<script>
-	
-								function validateNameInput(input) {
-									input.value = input.value.replace(/[^A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]+/g, '');
-								}
-
-				
-								function validatePhoneInput(input) {
-									input.value = input.value.replace(/[^0-9]+/g, '');
-									if (input.value.length > 9) {
-										input.value = input.value.slice(0, 9);
-									}
-								}
-
-				
-								function validateSubjectInput(input) {
-									input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
-								}
-
+								<!-- Scripts para cada validacion -->
+								<script>
 		
-								function validateMessageInput(input) {
-									input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
-								}
-
-		
-								function validateEmailInput(input) {
-									var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-									if (!emailPattern.test(input.value)) {
-										input.setCustomValidity('Por favor ingrese un correo electrónico válido.');
-									} else {
-										input.setCustomValidity(''); 
+									function validateNameInput(input) {
+										input.value = input.value.replace(/[^A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]+/g, '');
 									}
-								}
-							</script>
+
+					
+									function validatePhoneInput(input) {
+										input.value = input.value.replace(/[^0-9]+/g, '');
+										if (input.value.length > 9) {
+											input.value = input.value.slice(0, 9);
+										}
+									}
+
+					
+									function validateSubjectInput(input) {
+										input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
+									}
+
+			
+									function validateMessageInput(input) {
+										input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
+									}
+
+			
+									function validateEmailInput(input) {
+										var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+										if (!emailPattern.test(input.value)) {
+											input.setCustomValidity('Por favor ingrese un correo electrónico válido.');
+										} else {
+											input.setCustomValidity(''); 
+										}
+									}
+								</script>
+							</form>	
 						
 						</div>
 						<div class="col-lg-6">

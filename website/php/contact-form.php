@@ -1,58 +1,64 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+// Incluir el autoload de Composer
+require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-    $telefono = isset($_POST['telefono']) ? $_POST['telefono'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $asunto = isset($_POST['asunto']) ? $_POST['asunto'] : '';
-    $mensaje = isset($_POST['mensaje']) ? $_POST['mensaje'] : '';
-    
+$mail = new PHPMailer(true);
 
-    $destinatario = "pruebas3@allpasac.com";  
-    $subject = "Nuevo mensaje desde el formulario de contacto: " . $asunto;
-    $cuerpo = "Nombre: $nombre\nTeléfono: $telefono\nEmail: $email\nAsunto: $asunto\n\nMensaje:\n$mensaje";
+try {
+    // Configuración del servidor SMTP
+    $mail->SMTPDebug = 2;                         // 0 para producción, 2 para depuración detallada
+    $mail->isSMTP();
+    $mail->Host = 'mail.allpasac.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'pruebas3@allpasac.com';
+    $mail->Password = 'cu!KDk4[-[k%MJ,l@;';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
 
+    // Datos del formulario
+    $nombre   = $_POST['nombre'];
+    $email    = $_POST['email'];
+    $telefono = $_POST['telefono'];
+    $asunto   = $_POST['asunto'];
+    $mensaje  = $_POST['mensaje'];
 
-    $mail = new PHPMailer(true);
+    // Configurar remitente y destinatario
+    $mail->setFrom($email, $nombre);
+    $mail->addAddress('pruebas3@allpasac.com', 'Contacto Web');
 
-    try {
-
-        $mail->isSMTP();                                      
-        $mail->Host = 'mail.allpasac.com';                      
-        $mail->SMTPAuth = true;                                
-        $mail->Username = 'pruebas3@allpasac.com';             
-        $mail->Password = 'cu!KDk4[-[k%MJ,l@;';               
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;       
-        $mail->Port = 465;          
-
-        // Receptores
-        $mail->setFrom($email, $nombre);                       
-        $mail->addAddress($destinatario);                       
-
-        // Asunto y cuerpo del mensaje
-        $mail->Subject = $subject;
-        $mail->Body    = $cuerpo;
-        $mail->AltBody = strip_tags($cuerpo);                   
-
-        // Adjuntar el archivo (si hay)
-        if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
-            $file_tmp = $_FILES['file']['tmp_name'];
-            $file_name = $_FILES['file']['name'];
-            $file_type = mime_content_type($file_tmp);
-            $mail->addAttachment($file_tmp, $file_name, null, $file_type);  // Adjuntar archivo
-        }
-
-        // Enviar el correo
-        $mail->send();
-        echo "Se envió tu mensaje exitosamente.";
-    } catch (Exception $e) {
-        echo "Hubo un problema al enviar tu mensaje. Error: {$mail->ErrorInfo}";
+    // Validación y adjunto
+    $archivoAdjuntado = false;
+    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+        $mail->addAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+        $archivoAdjuntado = true;
     }
-}
-?>
 
+    // Contenido del mensaje
+    $mail->isHTML(false);
+    $mail->Subject = "Formulario Web: $asunto";
+    $mail->Body =
+        "Nombre: $nombre\n" .
+        "Correo: $email\n" .
+        "Teléfono: $telefono\n\n" .
+        "Mensaje:\n$mensaje\n\n" .
+        ($archivoAdjuntado ? "Se adjuntó un archivo: " . $_FILES['file']['name'] : "No se adjuntó ningún archivo.");
+
+    // Enviar mensaje
+    $mail->send();
+
+    // Confirmación
+    echo '¡El mensaje se envió correctamente!';
+    if ($archivoAdjuntado) {
+        echo ' El archivo "' . $_FILES['file']['name'] . '" fue adjuntado.';
+    } else {
+        echo ' No se adjuntó ningún archivo.';
+    }
+
+} catch (Exception $e) {
+    echo 'Hubo un error al enviar el mensaje: ' . $mail->ErrorInfo;
+}
