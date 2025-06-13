@@ -40,6 +40,7 @@
 		<link rel="stylesheet" href="css/theme-elements.css">
 		<link rel="stylesheet" href="css/theme-blog.css">
 		<link rel="stylesheet" href="css/theme-shop.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Current Page CSS -->
 		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
@@ -47,8 +48,7 @@
 		<!-- Skin CSS -->
 		<link id="skinCSS" rel="stylesheet" href="css/skins/default.css">
 
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/custom.css">
+		
 
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -107,126 +107,116 @@
 		'stickyHeaderContainerHeight': 70
 	}">
 
-	<!-- BLOQUE SUPERIOR (LOGO + CONTACTO) -->
-	<div class="header-body bg-white border-bottom-0" style="border-top: none !important; box-shadow: none !important;">
+		<!-- BLOQUE SUPERIOR (LOGO + CONTACTO) -->
+		<div class="header-body bg-white border-bottom-0" style="border-top: none !important; box-shadow: none !important;">
 
-		<div class="header-top" style="background-color: #ffffff;">
-			<div class="container">
-				<div class="header-row py-2">
-					<div class="header-column">
-						<div class="header-logo header-logo-sticky-change d-flex align-items-center">
-	<a href="index.html">
+			<div class="header-top" style="background-color: #ffffff;">
+				<div class="container">
+					<div class="header-row py-2">
+						<div class="header-column">
+							<div class="header-logo header-logo-sticky-change d-flex align-items-center">
+								<a href="index.html">
+									<!-- Logo modo normal (al inicio) -->
+									<img class="header-logo-non-sticky"
+										alt="Logo"
+										src="imgallpa/LOGO3.png"
+										
+										>
+	
+								</a>
 
-		<!-- Logo modo normal (al inicio) -->
-		<img class="header-logo-non-sticky"
-			alt="Logo"
-			width="120" height="55"
-			src="imgallpa/image (2).png"
-			style="max-height: 55px; object-fit: contain;">
-	</a>
-</div>
-
-					</div>
+								</a>
+							</div>
+						</div>
 					<div class="header-column justify-content-end">
-	<ul class="header-extra-info d-flex align-items-center gap-3" style="height: 100%;">
-		<!-- Botón Cotízanos -->
-		<li class="d-inline-flex align-items-center">
-			<a href="cotizanos.html" class="btn btn-primary text-uppercase px-4 py-2" style="font-size: 0.85rem; font-weight: 600;">
-				Cotízanos
-			</a>
-		</li>
+				<ul class="header-extra-info d-flex align-items-center gap-3" style="height: 100%;">
+					
+					<!-- Botón Cotízanos
+					<li class="d-inline-flex align-items-center">
+						<a href="cotizanos.html" class="btn btn-primary text-uppercase px-4 py-2" style="font-size: 0.85rem; font-weight: 600;">
+							Cotízanos
+						</a>
+					</li>
+					-->
 
-		<!-- Llamanos -->
-		<li class="d-inline-flex align-items-center">
-			<div class="header-extra-info-icon">
-				<i class="fab fa-whatsapp text-color-primary text-4 position-relative bottom-1"></i>
-			</div>
-			<div class="header-extra-info-text ms-2">
-				<label class="mb-0">LLÁMANOS</label>
-				<strong><a href="https://wa.me/51950707731" class="text-decoration-none text-color-hover-primary">+51 950 707 731</a></strong>
-			</div>
-		</li>
-	</ul>
-</div>
-
-				</div>
-			</div>
-		</div>
-
-		<!-- BLOQUE DE NAVEGACIÓN (STICKY + LOGO + MENÚ) -->
-		<div class="header-nav-bar header-nav-bar-top-border bg-transparent"
-			data-sticky-header-style="{'minResolution': 0, 'background-color': '#003A5D'}"
-			data-sticky-header-style-active="{'minResolution': 0, 'background-color': '#003A5D'}"
-			data-sticky-header-style-deactive="{'minResolution': 0, 'background-color': 'transparent'}">
-
-			<div class="container">
-				<div class="header-row align-items-center">
-
-					<!-- Logo en sticky mode (solo visible al hacer scroll) -->
-					<div class="header-column w-auto me-4 d-none d-lg-block align-items-center d-flex">
-	<div class="header-logo header-logo-sticky-change">
-		<a href="index.html">
-			<img class="header-logo-sticky opacity-0"
-				data-sticky-logo-active="true"
-				alt="Logo" width="120" height="55"
-				src="imgallpa/LOGOBLANCOS.png"
-				data-sticky-width="120"
-				data-sticky-height="55"
-				data-sticky-top="0"
-				style="max-height: 55px; object-fit: contain;">
-		</a>
-	</div>
-</div>
-
-				<!-- Menú de navegación -->
-<div class="header-column">
-	<div class="header-row justify-content-end">
-		<div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
-			<div class="header-nav-main header-nav-main-font-lg header-nav-main-font-lg-upper-2 header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
-				<nav class="collapse">
-					<ul class="nav nav-pills" id="mainNav">
-						<li class="dropdown">
-							<a data-hash class="nav-link active" href="#home">INICIO</a>
-						</li>
-						<li>
-							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#esencia">Esencia</a>
-						</li>
-						<li>
-							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#services">Servicios</a>
-						</li>
-						<li>
-							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#projects">Educación</a>
-						</li>
-						<li>
-							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#clients">Clientes</a>
-						</li>
-						<li>
-							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#team">Nuestros Logros</a>
+					<!-- Llamanos -->
+						<li class="d-inline-flex align-items-center">
+							<div class="header-extra-info-icon">
+								<i class="fab fa-whatsapp text-color-primary text-4 position-relative bottom-1"></i>
+							</div>
+							<div class="header-extra-info-text ms-2">
+								<label class="mb-0">COTIZANOS</label>
+								<strong><a href="https://wa.me/51950707731" class="text-decoration-none text-color-hover-primary">+51 950 707 731</a></strong>
+							</div>
 						</li>
 					</ul>
-				</nav>
+				</div>
+
+					</div>
+				</div>
 			</div>
-			<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-				<i class="fas fa-bars"></i>
-			</button>
+
+			<!-- BLOQUE DE NAVEGACIÓN (STICKY + LOGO + MENÚ) -->
+			<div class="header-nav-bar header-nav-bar-top-border bg-transparent"
+				data-sticky-header-style="{'minResolution': 0, 'background-color': '#003A5D'}"
+				data-sticky-header-style-active="{'minResolution': 0, 'background-color': '#003A5D'}"
+				data-sticky-header-style-deactive="{'minResolution': 0, 'background-color': 'transparent'}">
+
+				<div class="container">
+					<div class="header-row align-items-center">
+
+						<!-- Logo en sticky mode (solo visible al hacer scroll) -->
+						<div class="header-column w-auto me-4 d-none d-lg-block align-items-center d-flex">
+							<div class="header-logo header-logo-sticky-change">
+								<a href="index.html">
+									<img class="header-logo-sticky opacity-0"
+										data-sticky-logo-active="true"
+										alt="Logo" width="150" height="1000"
+										src="imgallpa/LOGOBLANCOS.png"
+										data-sticky-width="120"
+										data-sticky-height="50"
+										data-sticky-top="0"
+										style="max-height: 65px; object-fit: contain;">
+								</a>
+							</div>
+						</div>
+
+				<!-- Menú de navegación -->
+	<div class="header-column">
+		<div class="header-row justify-content-end">
+			<div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
+				<div class="header-nav-main header-nav-main-font-lg header-nav-main-font-lg-upper-2 header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
+					<nav class="collapse">
+						<ul class="nav nav-pills" id="mainNav">
+							<li class="dropdown">
+								<a data-hash class="nav-link active" href="#home">INICIO</a>
+							</li>
+							<li>
+								<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#esencia">Esencia</a>
+							</li>
+							<li>
+								<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#services">Servicios</a>
+							</li>
+							<li>
+								<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#projects">Educación</a>
+							</li>
+							<li>
+								<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#clients">Clientes</a>
+							</li>
+							<li>
+								<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#team">Nuestros Logros</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
 		</div>
 	</div>
-</div>
 
 </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 			<div role="main" class="main">
 				<div id="home" class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 7000}" style="height: 100vh;">
@@ -258,9 +248,50 @@
 									</div>
 								</div>
 							</div>
+														
+							<!-- Carousel Slide 2-->
+								<div class="owl-item position-relative pt-5 slide-5"
+									style="
+									background-image: url(imgallpa/CAMPAÑA.png);
+									background-repeat: no-repeat;
+									background-size: auto 875px;
+									background-position: center 50px;  /* mueve la imagen 30px hacia abajo */
+									">
+								</div>
 
+							<!-- Carousel Slide 3-->
+							<div class="owl-item position-relative pt-5 slide-5"
+									style="
+									background-image: url(imgallpa/senace.png);
+									background-repeat: no-repeat;
+									background-size: auto 875px;
+									background-position: center 50px;  /* mueve la imagen 30px hacia abajo */
+									">
+								</div>
+							<!-- Carousel Slide 4-->
+							<div class="owl-item position-relative overlay overlay-show overlay-op-8 pt-5" style="background-image: url(imgallpa/FOTOGRUPAL.png); background-size: cover; background-position: center;">
+									
+								<div class="container position-relative z-index-3 h-100">
+									<div class="row justify-content-center align-items-center h-100">
+										<div class="col-lg-6">
+											<div class="d-flex flex-column align-items-center">
+												
+												<!-- <h2 class="text-color-light font-weight-extra-bold text-12 mb-4 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}">
+													ALLPA <span class="position-relative">ESPECIALISTAS<span class="position-absolute left-50pct transform3dx-n50 bottom-0"><img src="img/slides/slide-blue-line-big.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="1000" data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}" alt="" /></span></span> EN SOLUCIONES AMBIENTALES
+												</h2> -->
+												
 
-							<!-- Carousel Slide 2 -->
+												<h2 class="text-color-light text-center font-weight-extra-bold text-12 mb-3 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">GANADORES DEL CONCURSO ProInnovate</h2>
+
+																						
+												 <!-- <p class="text-4 text-color-light font-weight-light opacity-7 text-center mt-2 mb-4" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'firstLoadNoAnim': true, 'minWindowWidth': 0, 'animationSpeed': 25}">Trusted by over <strong class="text-color-light">40,000</strong> satisfied users, Porto is a huge success in the one of larest world's MarketPlace</p>  -->																				
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Carousel Slide 5 -->
 							<!--  Sin Fondo Oscuro
 							<div class="owl-item position-relative pt-5" style="background-image: url(imgallpa/IMG_4504.JPG); background-size: cover; background-position: center; background-color: #35383d;"> -->
 
@@ -290,14 +321,14 @@
 												 <!-- <p class="text-4 text-color-light font-weight-light opacity-7 text-center mt-2 mb-4" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'firstLoadNoAnim': true, 'minWindowWidth': 0, 'animationSpeed': 25}">Trusted by over <strong class="text-color-light">40,000</strong> satisfied users, Porto is a huge success in the one of larest world's MarketPlace</p>  -->
 
 										
-												<a href="#" class="btn btn-primary btn-rounded font-weight-bold text-3 px-5 py-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}">Muy Pronto!</a>
+												<a href="https://allpavirtual.odoo.com/" target="_blank" class="btn btn-primary btn-rounded font-weight-bold text-3 px-5 py-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}">Aula Virtual</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 
-							<!-- Carousel Slide 3 -->
+							<!-- Carousel Slide 6 -->
 							<div class="owl-item position-relative overlay overlay-show overlay-op-8 pt-5" style="background-image: url(imgallpa/IMG_5009.JPG); background-size: cover; background-position: center;">
 								<div class="container position-relative z-index-3 h-100">
 									<div class="row justify-content-center align-items-center h-100">
@@ -321,7 +352,7 @@
 							</div>
 
 							
-							<!-- Carousel Slide 4 Con Video-->
+							<!-- Carousel Slide 7-->
 							<!--  <div class="owl-item position-relative video overlay overlay-show overlay-op-8 pt-5" data-video-path="video/memory-of-a-woman" data-plugin-video-background data-plugin-options="{'posterType': 'jpg', 'position': '50% 50%'}"> -->
 
 							<div class="owl-item position-relative overlay overlay-show overlay-op-8 pt-5" style="background-image: url(imgallpa/IMG_9068_2.JPG); background-size: cover; background-position: center;">
@@ -349,6 +380,8 @@
 									</div>
 								</div>
 							</div>
+							
+
 
 						</div>
 					</div>
@@ -358,6 +391,9 @@
 					</div>
 					<div class="owl-dots mb-5">
 						<button role="button" class="owl-dot active"><span></span></button>
+						<button role="button" class="owl-dot"><span></span></button>
+						<button role="button" class="owl-dot"><span></span></button>
+						<button role="button" class="owl-dot"><span></span></button>
 						<button role="button" class="owl-dot"><span></span></button>
 						<button role="button" class="owl-dot"><span></span></button>
 						<button role="button" class="owl-dot"><span></span></button>
@@ -909,8 +945,9 @@
 					<div class="row justify-content-center pt-5 mt-5">
 						<div class="col-lg-9 text-center">
 							<div class="appear-animation" data-appear-animation="fadeInUpShorter">
-								<h1 class="font-weight-bold mb-4 ">Proyecto Educativo</h1>
-								<p class="text-4">ALLPA presenta sus nuevos cursos educativos, una propuesta innovadora que combina la tecnología con el aprendizaje.</p>
+								<h1 class="font-weight-bold mb-4 ">Plataforma Educativa Allpa Educa 360</h1>
+								<a href="https://allpavirtual.odoo.com/" target="_blank" class="btn btn-primary btn-rounded font-weight-bold text-3 px-5 py-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}">Aula Virtual</a>
+								<p class="text-4"><br>ALLPA presenta sus nuevos cursos educativos, una propuesta innovadora que combina la tecnología con el aprendizaje.</p>
 							</div>
 							<p class="pb-3 mb-4 appear-animation text-3 " data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">Nos enfocamos en brindar oportunidades de aprendizaje innovadoras y de calidad. Nuestro objetivo es fomentar el conocimiento y la conciencia ambiental en estudiantes y profesionales del sector público y privado en Perú.</p>
 						</div>
@@ -937,7 +974,7 @@
 													<img src="imgallpa/IMG_6605_1.jpg" class="img-fluid border-radius-0" alt="">
 													<span class="thumb-info-title">
 														<span class="thumb-info-inner">Monitoreo de Aire</span>
-														<span class="thumb-info-type">¡Muy pronto!</span>
+														<!--<span class="thumb-info-type">¡Muy pronto!</span>-->
 													</span>
 													<span class="thumb-info-action">
 														<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
@@ -955,7 +992,7 @@
 														<img src="imgallpa/IMG_9128_1.jpg" class="img-fluid border-radius-0" alt=""></span></span>
 													<span class="thumb-info-title">
 														<span class="thumb-info-inner">Monitoreo de Agua</span>
-														<span class="thumb-info-type">¡Muy pronto!</span>
+														<!--<span class="thumb-info-type">¡Muy pronto!</span>-->
 													</span>
 													<span class="thumb-info-action">
 														<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
@@ -972,7 +1009,7 @@
 													<img src="imgallpa/suelo_1.jpg" class="img-fluid border-radius-0" alt="">
 													<span class="thumb-info-title">
 														<span class="thumb-info-inner">Monitoreo de Suelo</span>
-														<span class="thumb-info-type">¡Muy pronto!</span>
+														<!--<span class="thumb-info-type">¡Muy pronto!</span>-->
 													</span>
 													<span class="thumb-info-action">
 														<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
@@ -989,7 +1026,7 @@
 													<img src="imgallpa/IMG_9241_1.jpg" class="img-fluid border-radius-0" alt="">
 													<span class="thumb-info-title">
 														<span class="thumb-info-inner">Monitoreo de Ruido</span>
-														<span class="thumb-info-type">¡Muy pronto!</span>
+														<!--<span class="thumb-info-type">¡Muy pronto!</span>-->
 													</span>
 													<span class="thumb-info-action">
 														<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
@@ -1378,12 +1415,12 @@
 										<div class="my-4 lightbox appear-animation" data-appear-animation="fadeInUpShorter" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
 											<div class="owl-carousel owl-theme pb-3" data-plugin-options="{'items': 4, 'margin': 55, 'loop': false}">
 
-													<a href="imgallpa/logros/1.png" data-fancybox="image-1" aria-label="">
+													<a href="imgallpa/ISO/ISO_9001.png" data-fancybox="image-1" aria-label="">
 														<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info">
 															<span class="thumb-info-wrapper">
 																<img src="imgallpa/logros/1.png" class="img-thumbnail" alt="">
 																<span class="thumb-info-title">
-																	<span class="thumb-info-inner">Sistema de Gestión de Calidad<em>2023</em></span>
+																	<span class="thumb-info-inner">Sistema de Gestión de Calidad<em>2015</em></span>
 																	<span class="thumb-info-type text-1">ISO 9001</span>
 																</span>
 															</span>
@@ -1391,12 +1428,12 @@
 													</a>
 												
 
-													<a href="imgallpa/logros/2.png" data-fancybox="image-2" aria-label="">
+													<a href="imgallpa/ISO/ISO_14001.png" data-fancybox="image-2" aria-label="">
 														<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info">
 															<span class="thumb-info-wrapper">
 																<img src="imgallpa/logros/2.png" class="img-thumbnail" alt="">
 																<span class="thumb-info-title">
-																	<span class="thumb-info-inner">Sistema de Gestión Ambiental<em>2023</em></span>
+																	<span class="thumb-info-inner">Sistema de Gestión Ambiental<em>2015</em></span>
 																	<span class="thumb-info-type text-1">ISO 14001</span>
 																</span>
 															</span>
@@ -1404,12 +1441,12 @@
 													</a>
 
 													
-													<a href="imgallpa/logros/3.png" data-fancybox="image-3" aria-label="">
+													<a href="imgallpa/ISO/ISO_45001.png" data-fancybox="image-3" aria-label="">
 														<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info">
 															<span class="thumb-info-wrapper">
 																<img src="imgallpa/logros/3.png" class="img-thumbnail" alt="">
 																<span class="thumb-info-title">
-																	<span class="thumb-info-inner">Sistemas de gestión de la seguridad y salud en el trabajo <em>2023</em></span>
+																	<span class="thumb-info-inner">Sistemas de Gestión de la Seguridad y Salud en el Trabajo <em>2018</em></span>
 																	<span class="thumb-info-type text-1">ISO 45001</span>
 																</span>
 															</span>
@@ -1417,13 +1454,13 @@
 													</a>
 												
 
-													<a href="imgallpa/logros/3.png" data-fancybox="image-4" aria-label="">
+													<a href="imgallpa/ISO/ISO_37001.png" data-fancybox="image-4" aria-label="">
 														<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info">
 															<span class="thumb-info-wrapper">
-																<img src="imgallpa/logros/3.png" class="img-thumbnail" alt="">
+																<img src="imgallpa/logros/8.png" class="img-thumbnail" alt="">
 																<span class="thumb-info-title">
-																	<span class="thumb-info-inner">EJEMPLO <em>2023</em></span>
-																	<span class="thumb-info-type text-1">VERLO</span>
+																	<span class="thumb-info-inner">Sistemas de Gestión Antisoborno<em>2016</em></span>
+																	<span class="thumb-info-type text-1">ISO 37001</span>
 																</span>
 															</span>
 														</span>
@@ -1459,19 +1496,32 @@
 
 								<h2 class="font-weight mb-4 ">Reconocimientos</h2>
 								<div class="d-flex align-items-center justify-content-center">
-									<div class="col-lg-4">
+									<div class="col-lg-4 me-4">
 										<a href="imgallpa/logros/7.png" data-fancybox="image-6" aria-label="">
 											<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info">
 												<span class="thumb-info-wrapper">
 													<img src="imgallpa/logros/7.png" class="img-thumbnail" alt="">
 													<span class="thumb-info-title">
-														<span class="thumb-info-inner">Marca Arequipa <em>2022</em></span>
+														<span class="thumb-info-inner">Marca Arequipa<em>2022</em></span>
 														<span class="thumb-info-type text-1">Representantes</span>
 													</span>
 												</span>
 											</span>
 										</a>
 									</div>
+									<div class="col-lg-4 ms-2">
+										<a href="imgallpa/logros/ProInnovate.png" data-fancybox="image-7" aria-label="">
+											<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info">
+												<span class="thumb-info-wrapper">
+													<img src="imgallpa/logros/ProInnovate.png" class="img-thumbnail" alt="">
+													<span class="thumb-info-title">
+														<span class="thumb-info-inner">Concurso ProInnovate</span>
+														<span class="thumb-info-type text-1">Ganadores</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>								
 								</div>									
 	
 						</div>

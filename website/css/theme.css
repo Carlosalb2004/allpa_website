@@ -113,7 +113,7 @@ pre {
 	background: #FFF;
 	transition: min-height 0.3s ease;
 	width: 100%;
-	border-top: 3px solid #EDEDED;
+	border-top: 50px solid #EDEDED;
 	border-bottom: 1px solid transparent;
 	z-index: 1001;
 }
@@ -250,8 +250,9 @@ pre {
 #header .header-top {
 	display: flex;
 	align-items: center;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.06);
-	min-height: 47px;
+	border-bottom: none !important;
+	height: 80px;
+	
 }
 
 #header .header-top.header-top-light-border-bottom {
@@ -267,7 +268,7 @@ pre {
 }
 
 #header .header-top.header-top-borders {
-	border-bottom-width: 1px;
+	border-bottom-width: 0px;
 }
 
 #header .header-top.header-top-borders .nav-item-borders {
@@ -339,6 +340,7 @@ pre {
 	padding: 16px 0;
 	padding: 1rem 0;
 	min-height: 70px;
+
 }
 
 #header .header-nav-top {

@@ -3,9 +3,41 @@
 }
 
 #header .header-body {
-    background-color: rgb(25, 96, 150) !important;
+    background-color: #207aad !important;
 }
 .header-logo-sticky {
     opacity: 1 !important;
 }
+
+
+/* Eliminar línea blanca arriba del header azul */
+.header-nav-bar {
+    border-top: none !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+.header-nav-bar::before {
+    display: none !important;
+}
+
+
+
+.header-nav-bar-top-border {
+    border-top: none !important;
+    box-shadow: none !important;
+}
+
+/* Ajuste visual del logo */
+.header-logo-non-sticky {
+    height: 55px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
 
