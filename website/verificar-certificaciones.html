@@ -40,6 +40,7 @@
 		<link rel="stylesheet" href="css/theme-elements.css">
 		<link rel="stylesheet" href="css/theme-blog.css">
 		<link rel="stylesheet" href="css/theme-shop.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Current Page CSS -->
 		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
@@ -47,8 +48,8 @@
 		<!-- Skin CSS -->
 		<link id="skinCSS" rel="stylesheet" href="css/skins/default.css">
 
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/custom.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
@@ -58,6 +59,12 @@
 
 	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=N9nXkvZnBXyV3bcMj3poNab4FZfFNQ6LfbDl8OZeosvB7CxMc1Tsv8vu1fln3mw-6oPS6jf-8_crU8ryXAHyZAbkoN6c6qqgTLqwqMFAnpScCbFZXn5KwAy6BXgXkoFwSl7bB6Y0hXljBeB1C9iHfcAGdKjmf64w91oUIP-WiMBK6yfVOyxgpr_Q6IwdA23noIWJ6ouEw4UbfXGrH2TxhA" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly93d3cuYWxscGFzYWMuY29tOjIwODMvY3BzZXNzMzE5MDgwNzk1Ni9kb3dubG9hZD9za2lwZW5jb2RlPTEmZmlsZT0lMmZob21lJTJmYWxscGFzYTElMmZwdWJsaWNfaHRtbCUyZndlYnNpdGUlMmZpbmRleC5odG1s"/><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ILz1P4y9tS4lDOnQ-uTaScwYctQIQMhZXVKP58zXdL25ZgocvI7usMhIPm5Vj_elKipqZt1JKw5BKIJjHIWbOXWIE_5yUP4-7SCRIECjwzR3x0A50TLR2byOijRLGSh0j_vB1HCLvPPfB__r-4OVUtyfMzpUDO7S44CMraibBwo85g8-_Aj0kN85g6f_IIb3jIjAYd925z_ubuv_ErWfxg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly93d3cuYWxscGFzYWMuY29tOjIwODMvY3BzZXNzMzU2OTA4NTAzMi9kb3dubG9hZD9za2lwZW5jb2RlPTEmZmlsZT0lMmZob21lJTJmYWxscGFzYTElMmZwdWJsaWNfaHRtbCUyZndlYnNpdGUlMmZpbmRleC5odG1s"/></head>
 	-->
+		<!-- Fancybox CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
+
+		<!-- Fancybox JS -->
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
 	
 	</head>
@@ -98,7 +105,7 @@
 		'stickyHeaderContainerHeight': 70
 	}">
 
-	<!-- BLOQUE SUPERIOR (LOGO + CONTACTO) -->
+		<!-- BLOQUE SUPERIOR (LOGO + CONTACTO) -->
 		<div class="header-body bg-white border-bottom-0" style="border-top: none !important; box-shadow: none !important;">
 
 			<div class="header-top" style="background-color: #ffffff;">
@@ -148,30 +155,29 @@
 			</div>
 
 		<!-- BLOQUE DE NAVEGACIÓN (STICKY + LOGO + MENÚ) -->
-		<div class="header-nav-bar header-nav-bar-top-border"
-     style="background-color: #212529 ;"
-     data-sticky-header-style="{'minResolution': 0, 'background-color': '#212529 '}"
-     data-sticky-header-style-active="{'minResolution': 0, 'background-color': '#212529 '}"
-     data-sticky-header-style-deactive="{'minResolution': 0, 'background-color': '#212529 '}">
+			<div class="header-nav-bar header-nav-bar-top-border bg-transparent"
+				data-sticky-header-style="{'minResolution': 0, 'background-color': '#003A5D'}"
+				data-sticky-header-style-active="{'minResolution': 0, 'background-color': '#003A5D'}"
+				data-sticky-header-style-deactive="{'minResolution': 0, 'background-color': 'transparent'}">
 
-			<div class="container">
-				<div class="header-row align-items-center">
+				<div class="container">
+					<div class="header-row align-items-center">
 
-					<!-- Logo en sticky mode (solo visible al hacer scroll) -->
-					<div class="header-column w-auto me-4 d-none d-lg-block align-items-center d-flex">
-	<div class="header-logo header-logo-sticky-change">
-		<a href="index.html">
-			<img class="header-logo-sticky opacity-0"
-				data-sticky-logo-active="true"
-				alt="Logo" width="120" height="55"
-				src="imgallpa/LOGOBLANCOS.png"
-				data-sticky-width="120"
-				data-sticky-height="55"
-				data-sticky-top="0"
-				style="max-height: 55px; object-fit: contain;">
-		</a>
-	</div>
-</div>
+						<!-- Logo en sticky mode (solo visible al hacer scroll) -->
+						<div class="header-column w-auto me-4 d-none d-lg-block align-items-center d-flex">
+							<div class="header-logo header-logo-sticky-change">
+								<a href="index.html">
+									<img class="header-logo-sticky opacity-0"
+										data-sticky-logo-active="true"
+										alt="Logo" width="150" height="1000"
+										src="imgallpa/LOGOBLANCOS.png"
+										data-sticky-width="120"
+										data-sticky-height="50"
+										data-sticky-top="0"
+										style="max-height: 65px; object-fit: contain;">
+								</a>
+							</div>
+						</div>
 
 				<!-- Menú de navegación -->
 <div class="header-column">
@@ -181,13 +187,13 @@
 				<nav class="collapse">
 					<ul class="nav nav-pills" id="mainNav">
 						<li class="dropdown">
-						<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#home">Inicio</a>
+						<a class="nav-link active" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#home">Inicio</a>
 						</li>
 						<li>
 						<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#esencia">Esencia</a>
 						</li>
 						<li>
-							<a class="nav-link active" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#services">Servicios</a>
+							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#services">Servicios</a>
 						</li>
 						<li>
 							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#projects">Educación</a>
@@ -198,11 +204,11 @@
 						<li>
 							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#team">Nuestro Logros</a>
 						</li>
+						<!--
 						<li>
 							<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="index.html#contact">Contáctanos </a>
 						</li>
-
-
+						-->
 					</ul>
 				</nav>
 			</div>
@@ -212,162 +218,72 @@
 		</div>
 	</div>
 </div>
-<style>
-	.main-offset {
-		margin-top: 180px; /* Ajusta según la altura real del header sticky */
-	}
-</style>
+
 </header>
 
+			<div role="main" class="main">
+				 
+				<section class=" owl-item position-relative overlay overlay-show overlay-op-8 pt-5  section section-concept section-no-border section-dark section-angled section-angled-reverse pt-5 m-0" style="background-image: url(imgallpa/IMG_6516_2.JPG); background-size: cover; background-position: center; min-height: 645px;">
 
-
-
-
-
-<div role="main" class="main">
-  <!-- Este padding evita que el contenido quede tapado por el header fijo -->
-  <div style="height: 193px;"></div>
-  
-  <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-			
-
-				<div class="container">
-
-					<div class="row py-4">
-
-						<div class="col-lg-6">
-							<h2 class="font-weight-bold text-8 mt-2 mb-0">Contactanos</h2>
-							<p class="mb-4">Sientase libre de pedir detalles, ¡no guarde ninguna pregunta!</p>
-
-							<form class="contact-form" action="php/contact-form.php" method="POST">
-								
-								<div class="row">
-									<div class="form-group col-lg-6">
-										<label class="form-label mb-1 text-2">Nombre Completo</label>
-										<input type="text" value="" data-msg-required="Por favor ingrese su nombre completo." maxlength="100" 
-											class="form-control text-3 h-auto py-2" name="nombre" required 
-											oninput="validateNameInput(this)">
-									</div>
+					
+					<div class="section-angled-layer-bottom section-angled-layer-increase-angle bg-light" style="padding: 8rem 0;"></div>
+					<div class="container pt-lg-5 mt-5">
+						<div class="row pt-3 pb-lg-0 pb-xl-0">
+							<div class="col-lg-6 pt-4 mb-5 mb-lg-0">
+								<div class="appear-animation" data-appear-animation="fadeInUpShorter">
+								<ul class="breadcrumb font-weight-semibold text-4 negative-ls-1">
+									<li><a href="index.html">Inicio</a></li>
+									<li class="text-color-primary"><a href="verificar-certificaciones.html">Verificar Certificaciones</a></li>
 									
-									<div class="form-group col-lg-6">
-										<label class="form-label mb-1 text-2">Teléfono</label>
-										<input type="tel" value="" data-msg-required="Por favor ingrese su número telefónico." maxlength="15" 
-											class="form-control text-3 h-auto py-2" name="telefono" required 
-											oninput="validatePhoneInput(this)">
-									</div>
+								</ul>
+								<h1 class="font-weight-bold text-10 text-xl-12 line-height-2 mb-3">Verificar Certificación</h1>
+								<p class="opacity-7 text-4 negative-ls-05 pb-2 mb-4">Por favor ingresar el código del certificado el cual quieras verificar y nuestra base de datos corroborara la información. De no aparecer ponerse en contacto a la brevedad por medio de Contactanos.</p>
+								<a href="#examples" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-gradient-primary border-primary btn-effect-4 font-weight-semi-bold px-4 btn-py-2 text-3">Verificar<i class="fas fa-arrow-down ms-1"></i></a>
 								</div>
 
-								<div class="row">
-									<div class="form-group col">
-										<label class="form-label mb-1 text-2">Correo Electrónico</label>
-										<input type="email" value="" data-msg-required="Por favor ingrese su correo electrónico." 
-											data-msg-email="Por favor ingrese una dirección de correo válida." maxlength="100" 
-											class="form-control text-3 h-auto py-2" name="email" required 
-											oninput="validateEmailInput(this)">
-									</div>
-								</div>
+						</div>
+					</div>
+				</div>
+				</section>
 
-								<div class="row">
-									<div class="form-group col">
-										<label class="form-label mb-1 text-2">Asunto</label>
-										<input type="text" value="" data-msg-required="Por favor ingrese su asunto" maxlength="100" 
-											class="form-control text-3 h-auto py-2" name="asunto" required 
-											oninput="validateSubjectInput(this)">
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="form-group col">
-										<label class="form-label mb-1 text-2">Mensaje</label>
-										<textarea maxlength="5000" data-msg-required="Por favor ingrese su mensaje" rows="8" 
-												class="form-control text-3 h-auto py-2" name="mensaje" required 
-												oninput="validateMessageInput(this)"></textarea>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="form-group col">
-										<label class="form-label mb-1 text-2">Adjuntar Archivo (PDF)</label>
-										<input type="file" class="form-control text-3 h-auto py-2" name="file" accept=".pdf" />
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="form-group col">
-										<button type="submit" class="btn btn-primary btn-modern" value="enviar" id="submitButton">Enviar Mensaje</button>
-									</div>
-								</div>
-
-								<!-- Scripts para cada validacion -->
-								<script>
-		
-									function validateNameInput(input) {
-										input.value = input.value.replace(/[^A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]+/g, '');
-									}
+				<div id="examples" class="container py-2">
 
 					
-									function validatePhoneInput(input) {
-										input.value = input.value.replace(/[^0-9]+/g, '');
-										if (input.value.length > 9) {
-											input.value = input.value.slice(0, 9);
-										}
-									}
+					<div class="row">
+						<div class="col">
+							<div class="appear-animation" data-appear-animation="fadeInUpShorter">
+							<h4 class="mb-4 text-6">Motor de Busqueda</h4></div>
 
-					
-									function validateSubjectInput(input) {
-										input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
-									}
+							<div class="row">
+								<div class="col-lg-4">
+									<p>Ingresar el Código</p>
+									<input type="text" id="codigo" placeholder="XXXXX-XXXXX-XXX" oninput="validarInput(this)" maxlength="20">
+									<button onclick="buscarCodigo()">Buscar</button>
+								</div>
+								<div class="col-lg-8">
+								
+										<h4>Resultados</h4>
+										<!-- <img class="float-end" width="200" src="img/device.png" alt=""> -->
+										<p id="resultado"></p>
 
-			
-									function validateMessageInput(input) {
-										input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
-									}
-
-			
-									function validateEmailInput(input) {
-										var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-										if (!emailPattern.test(input.value)) {
-											input.setCustomValidity('Por favor ingrese un correo electrónico válido.');
-										} else {
-											input.setCustomValidity(''); 
-										}
-									}
-								</script>
-							</form>	
-						
-						</div>
-						<div class="col-lg-6">
-
-							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
-								<h4 class="mt-2 mb-1"><strong> Nuestras Sedes</strong></h4>
-								<ul class="list list-icons list-icons-style-2 mt-2">
-									<li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Dirección:</strong> Av. Salaverry 507 URB. Cerro Salaverry, Socabaya - Arequipa - Perú</li>
-									<li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Telefono:</strong> +51 950 707 731</li>
-									<li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="gerenciacomercial@allpasac.com">gerenciacomercial@allpasac.com</a></li>
-								</ul>
+								</div>
 							</div>
-
-							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="950">
-								<h4 class="pt-5"><strong>Horarios de Trabajo</strong> </h4>
-								<ul class="list list-icons list-dark mt-2">
-									<li><i class="far fa-clock top-6"></i> Lun a Vie: 8:00am - 5:30pm</li>
-									<li><i class="far fa-clock top-6"></i> Sábado: 8:00am - 1:30pm</li>
-									<li><i class="far fa-clock top-6"></i> Domingos - Cerrado</li>
-								</ul>
-							</div>
-<!--
-							<h4 class="pt-5">Get in <strong>Touch</strong></h4>
-							<p class="lead mb-0 text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
--->
 						</div>
-
 					</div>
 
+					<div class="row">
+						<div class="col">
+							<hr class="solid my-5">
+						</div>
+					</div>
+
+
 				</div>
-</div>
 
+		
+			</div>
 
-		<section class="section bg-primary border-0 m-0 ">
+			<section class="section bg-primary border-0 m-0 ">
 				<div class="container">
 					<div class="row justify-content-center text-center text-lg-start py-4">
 						
@@ -550,6 +466,9 @@
 
 		</div>
 
+	    <!--Script Busqueda en CSV-->
+		<script src="js/script.js"></script>
+
 		<!-- Vendor -->
 		<script src="vendor/plugins/js/plugins.min.js"></script>
 
@@ -574,77 +493,6 @@
 		<script src="js/views/view.home.js"></script>
 
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA9kKq-PAjPhFtLQke_lxUwsxxq90Pf54"></script>
-		
-		
-		<script>
-
-			/*
-			Map Settings
-
-				Find the Latitude and Longitude of your address:
-					- https://www.latlong.net/
-					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
-
-			*/
-
-			function initializeGoogleMaps() {
-				// Map Markers
-				var mapMarkers = [{
-					address: "Av. Salaverry 507 Urb. Cerro Salaverry",
-					html: "<strong>New York Office</strong><br>New York, NY 10017<br><br><a href='#' onclick='mapCenterAt({latitude: 40.75198, longitude: -73.96978, zoom: 16}, event)'>[+] zoom here</a>",
-					icon: {
-						image: "img/pin.png",
-						iconsize: [26, 46],
-						iconanchor: [12, 46]
-					}
-				}];
-
-				// Map Initial Location
-				var initLatitude = -16.433344;
-				var initLongitude = -71.537167;
-
-				// Map Extended Settings
-				var mapSettings = {
-					controls: {
-						draggable: (($.browser.mobile) ? false : true),
-						panControl: true,
-						zoomControl: true,
-						mapTypeControl: true,
-						scaleControl: true,
-						streetViewControl: true,
-						overviewMapControl: true
-					},
-					scrollwheel: false,
-					markers: mapMarkers,
-					latitude: initLatitude,
-					longitude: initLongitude,
-					zoom: 5
-				};
-
-				var map = $('#googlemaps').gMap(mapSettings),
-					mapRef = $('#googlemaps').data('gMap.reference');
-
-				// Styles from https://snazzymaps.com/
-				var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}];
-
-				var styledMap = new google.maps.StyledMapType(styles, {
-					name: 'Styled Map'
-				});
-
-				mapRef.mapTypes.set('map_style', styledMap);
-				mapRef.setMapTypeId('map_style');
-			}
-
-			// Initialize Google Maps when element enter on browser view
-			theme.fn.intObs( '.google-map', 'initializeGoogleMaps()', {} );
-
-			// Map text-center At
-			var mapCenterAt = function(options, e) {
-				e.preventDefault();
-				$('#googlemaps').gMap("centerAt", options);
-			}
-
-		</script>
 
 	</body>
 
