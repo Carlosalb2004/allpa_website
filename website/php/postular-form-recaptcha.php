@@ -39,7 +39,6 @@ if (!$captchaSuccess->success) {
     exit;
 }
 
-
 // Validación básica
 if (!$nombre || !$apellido || !$correo || !$telefono || !$puesto) {
 	echo json_encode(['response' => 'error', 'message' => 'Todos los campos son obligatorios.']);
