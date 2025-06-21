@@ -240,18 +240,26 @@
 							<p class="mb-4">Sientase libre de pedir detalles, ¡no guarde ninguna pregunta!</p>
 
 							<form class="contact-form" action="php/contact-form.php" method="POST">
-								
+								<div class="contact-form-success alert alert-success d-none mt-4">
+                                        <strong>¡Listo!</strong> Tu mensaje ha sido enviado con éxito.
+                                    </div>
+
+                                    <div class="contact-form-error alert alert-danger d-none mt-4">
+                                        <strong>¡Error!</strong> Hubo un problema al enviar tu mensaje.
+                                        <span class="mail-error-message text-1 d-block"></span>
+                                    </div>
+
 								<div class="row">
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Nombre Completo</label>
 										<input type="text" value="" data-msg-required="Por favor ingrese su nombre completo." maxlength="100" 
-											class="form-control text-3 h-auto py-2" name="nombre" required 
+											placeholder="Juan Alberto Gomez Ortiz" class="form-control text-3 h-auto py-2" name="nombre" required 
 											oninput="validateNameInput(this)">
 									</div>
 									
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Teléfono</label>
-										<input type="tel" value="" data-msg-required="Por favor ingrese su número telefónico." maxlength="15" 
+										<input type="tel" value="" data-msg-required="Por favor ingrese su número telefónico." placeholder="+51987654321" maxlength="15" 
 											class="form-control text-3 h-auto py-2" name="telefono" required 
 											oninput="validatePhoneInput(this)">
 									</div>
@@ -262,7 +270,7 @@
 										<label class="form-label mb-1 text-2">Correo Electrónico</label>
 										<input type="email" value="" data-msg-required="Por favor ingrese su correo electrónico." 
 											data-msg-email="Por favor ingrese una dirección de correo válida." maxlength="100" 
-											class="form-control text-3 h-auto py-2" name="email" required 
+											placeholder="example@example.com" class="form-control text-3 h-auto py-2" name="email" required 
 											oninput="validateEmailInput(this)">
 									</div>
 								</div>
@@ -287,15 +295,19 @@
 
 								<div class="row">
 									<div class="form-group col">
-										<label class="form-label mb-1 text-2">Adjuntar Archivo (PDF)</label>
-										<input type="file" class="form-control text-3 h-auto py-2" name="file" accept=".pdf" />
-									</div>
+                                            <label class="form-label mb-1 text-2">Adjuntar archivo (PDF, máximo 2 MB)</label>
+                                            <input type="file" name="attachment" 
+                                             id="attachment" accept=".pdf" class="form-control text-3 h-auto py-2" required>
+
+                                        </div>
 								</div>
 
-								<div class="row">
-									<div class="form-group col">
-										<button type="submit" class="btn btn-primary btn-modern" value="enviar" id="submitButton">Enviar Mensaje</button>
-									</div>
+								<div class="form-group col">
+										<div class="g-recaptcha" data-sitekey="6Lfg5mcrAAAAAI1YF7euUvSvZ2TOHmO5bktSXj9D"></div>
+								</div>
+								
+								<div class="form-group col">
+										<input type="submit" value="Enviar Mensaje" class="btn btn-primary btn-modern" data-loading-text="Loading...">
 								</div>
 
 								<!-- Scripts para cada validacion -->
@@ -556,13 +568,44 @@
 		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
 
-		<script src="js/views/view.contact.js"></script>
+		<!-- <script src="js/views/view.contact.js"></script> -->
 
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
 
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
+
+		<script>
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.response === 'success') {
+                document.querySelector('.contact-form-success').classList.remove('d-none');
+                document.querySelector('.contact-form-error').classList.add('d-none');
+                form.reset();
+            } else {
+                document.querySelector('.contact-form-error').classList.remove('d-none');
+                document.querySelector('.contact-form-success').classList.add('d-none');
+                document.querySelector('.mail-error-message').textContent = result.message;
+            }
+        })
+        .catch(() => {
+            document.querySelector('.contact-form-error').classList.remove('d-none');
+            document.querySelector('.contact-form-success').classList.add('d-none');
+            document.querySelector('.mail-error-message').textContent = 'Ocurrió un error inesperado.';
+        });
+    });
+    </script>
 
 		<!-- Examples -->
 		<script src="js/examples/examples.portfolio.js"></script>
@@ -572,6 +615,9 @@
 		
 		<!-- Current Page Views -->
 		<script src="js/views/view.home.js"></script>
+
+		 <!-- Script ReCaptcha -->
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA9kKq-PAjPhFtLQke_lxUwsxxq90Pf54"></script>
 		

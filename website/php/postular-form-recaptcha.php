@@ -2,70 +2,98 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// Mostrar errores (útil en desarrollo)
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+// Incluir PHPMailer
 require 'php-mailer/src/PHPMailer.php';
 require 'php-mailer/src/SMTP.php';
 require 'php-mailer/src/Exception.php';
 
+// Devolver respuesta JSON
 header('Content-Type: application/json');
 
-// Clave secreta del reCAPTCHA
-$recaptcha_secret = '6Lfg5mcrAAAAAF3dDczIttN-NZxsuxj15MbazUBd';
-$recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+// Obtener datos del formulario
+$nombre    = $_POST['name'] ?? '';
+$apellido  = $_POST['surname'] ?? '';
+$correo    = $_POST['email'] ?? '';
+$telefono  = $_POST['phone'] ?? '';
+$puesto    = $_POST['puesto'] ?? '';
+$archivo   = $_FILES['attachment'] ?? null;
 
-if (!$recaptcha_response) {
-    echo json_encode(['response' => 'error', 'message' => 'Por favor completa el reCAPTCHA.']);
+// Validar reCAPTCHA
+$recaptchaSecret = '6Lfg5mcrAAAAAF3dDczIttN-NZxsuxj15MbazUBd';
+$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+
+if (empty($recaptchaResponse)) {
+    echo json_encode(['response' => 'error', 'message' => 'Por favor, completa el reCAPTCHA.']);
     exit;
 }
 
-// Verifica con la API de Google
-$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptcha_secret}&response={$recaptcha_response}");
-$captcha_success = json_decode($verify);
+$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+$captchaSuccess = json_decode($verify);
 
-if (!$captcha_success->success) {
-    echo json_encode(['response' => 'error', 'message' => 'Error en la verificación de reCAPTCHA.']);
+if (!$captchaSuccess->success) {
+    echo json_encode(['response' => 'error', 'message' => 'reCAPTCHA inválido. Intenta de nuevo.']);
     exit;
 }
 
-// Recoge los datos del formulario
-$data = [
-    'service'     => $_POST['service']     ?? '',
-    'phone'       => $_POST['phone']       ?? '',
-    'name'        => $_POST['name']        ?? '',
-    'adress'      => $_POST['adress']      ?? '',
-    'cellphone'   => $_POST['cellphone']   ?? '',
-    'email'       => $_POST['email']       ?? '',
-    'radios'      => $_POST['radios']      ?? '',
-    'otros'       => $_POST['otros']       ?? '',
-    'description' => $_POST['description'] ?? '',
-    'namerec'     => $_POST['namerec']     ?? '',
-    'arearec'     => $_POST['arearec']     ?? '',
-];
-
-// Arma el mensaje del correo
-$mensaje = "Nuevo Reclamo Recibido:\n\n";
-foreach ($data as $key => $value) {
-    $mensaje .= ucfirst($key) . ": " . strip_tags($value) . "\n";
+// Validación básica
+if (!$nombre || !$apellido || !$correo || !$telefono || !$puesto) {
+	echo json_encode(['response' => 'error', 'message' => 'Todos los campos son obligatorios.']);
+	exit;
 }
 
-$destinatario = 'pruebas3@allpasac.com';
-$asunto = "Reclamo de " . $data['name'];
+// Configura tu correo destino
+$destinatario = 'pruebas3@allpasac.com';  // ← Cámbialo si es necesario
+$asunto = "Postulación de $nombre $apellido";
+$mensaje = <<<EOT
+Nombres: $nombre
+Apellidos: $apellido
+Correo: $correo
+Teléfono: $telefono
+Puesto: $puesto
+EOT;
 
 $mail = new PHPMailer(true);
 
 try {
-    $mail->CharSet = 'UTF-8';
-    $mail->setFrom($data['email'], $data['name']);
-    $mail->addAddress($destinatario);
-    $mail->addReplyTo($data['email']);
+	$mail->CharSet = 'UTF-8';
+	$mail->setFrom($correo ?: $destinatario, "$nombre $apellido");
+	$mail->addAddress($destinatario);
+	$mail->addReplyTo($correo);
 
-    $mail->Subject = $asunto;
-    $mail->Body = nl2br($mensaje);
-    $mail->isHTML(true);
+	$mail->Subject = $asunto;
+	$mail->Body    = nl2br($mensaje);
+	$mail->isHTML(true);
 
-    $mail->send();
-    echo json_encode(['response' => 'success', 'message' => 'Reclamo enviado con éxito.']);
+	// Validar y adjuntar archivo PDF
+	if ($archivo && $archivo['error'] === UPLOAD_ERR_OK) {
+		$tmp = $archivo['tmp_name'];
+		$nombreArchivo = $archivo['name'];
+		$ext = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
+
+		if ($ext !== 'pdf') {
+			echo json_encode(['response' => 'error', 'message' => 'Solo se permiten archivos PDF.']);
+			exit;
+		}
+
+		if ($archivo['size'] > 2 * 1024 * 1024) {
+			echo json_encode(['response' => 'error', 'message' => 'Archivo demasiado grande (máx 2MB).']);
+			exit;
+		}
+
+		$mail->addAttachment($tmp, $nombreArchivo);
+	} else {
+		echo json_encode(['response' => 'error', 'message' => 'Error al subir el archivo.']);
+		exit;
+	}
+
+	// Enviar correo
+	$mail->send();
+	echo json_encode(['response' => 'success', 'message' => 'Correo enviado con éxito.']);
 
 } catch (Exception $e) {
-    echo json_encode(['response' => 'error', 'message' => 'Error al enviar: ' . $mail->ErrorInfo]);
+	echo json_encode(['response' => 'error', 'message' => 'Error al enviar: ' . $mail->ErrorInfo]);
 }
-?>

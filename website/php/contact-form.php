@@ -2,63 +2,100 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Incluir el autoload de Composer
-require 'PHPMailer-master/src/Exception.php';
-require 'PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer-master/src/SMTP.php';
+// Mostrar errores para depuración
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+// Incluir PHPMailer
+require 'php-mailer/src/PHPMailer.php';
+require 'php-mailer/src/SMTP.php';
+require 'php-mailer/src/Exception.php';
+
+// Respuesta JSON
+header('Content-Type: application/json');
+
+// Capturar datos del formulario
+$nombre   = $_POST['nombre'] ?? '';
+$telefono = $_POST['telefono'] ?? '';
+$email    = $_POST['email'] ?? '';
+$asunto   = $_POST['asunto'] ?? '';
+$mensaje  = $_POST['mensaje'] ?? '';
+$archivo  = $_FILES['attachment'] ?? null;
+
+// Validar reCAPTCHA
+$recaptchaSecret = '6Lfg5mcrAAAAAF3dDczIttN-NZxsuxj15MbazUBd';
+$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+
+if (empty($recaptchaResponse)) {
+    echo json_encode(['response' => 'error', 'message' => 'Por favor, completa el reCAPTCHA.']);
+    exit;
+}
+
+$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+$captchaSuccess = json_decode($verify);
+
+if (!$captchaSuccess->success) {
+    echo json_encode(['response' => 'error', 'message' => 'reCAPTCHA inválido. Intenta de nuevo.']);
+    exit;
+}
+
+// Validación de campos obligatorios
+if (!$nombre || !$telefono || !$email || !$asunto || !$mensaje) {
+    echo json_encode(['response' => 'error', 'message' => 'Todos los campos son obligatorios.']);
+    exit;
+}
+
+// Configuración de correo
+$destinatario = 'pruebas3@allpasac.com'; // Cambiar a destino real
+$asuntoCorreo = "Mensaje de Contacto: $asunto";
+$cuerpoMensaje = <<<EOT
+Nombre: $nombre
+Teléfono: $telefono
+Correo: $email
+Asunto: $asunto
+
+Mensaje:
+$mensaje
+EOT;
 
 $mail = new PHPMailer(true);
 
 try {
-    // Configuración del servidor SMTP
-    $mail->SMTPDebug = 2;                         // 0 para producción, 2 para depuración detallada
-    $mail->isSMTP();
-    $mail->Host = 'mail.allpasac.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'pruebas3@allpasac.com';
-    $mail->Password = 'cu!KDk4[-[k%MJ,l@;';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+    $mail->CharSet = 'UTF-8';
+    $mail->setFrom($email ?: $destinatario, $nombre);
+    $mail->addAddress($destinatario);
+    $mail->addReplyTo($email);
 
-    // Datos del formulario
-    $nombre   = $_POST['nombre'];
-    $email    = $_POST['email'];
-    $telefono = $_POST['telefono'];
-    $asunto   = $_POST['asunto'];
-    $mensaje  = $_POST['mensaje'];
+    $mail->Subject = $asuntoCorreo;
+    $mail->Body    = nl2br($cuerpoMensaje);
+    $mail->isHTML(true);
 
-    // Configurar remitente y destinatario
-    $mail->setFrom($email, $nombre);
-    $mail->addAddress('pruebas3@allpasac.com', 'Contacto Web');
+    // Validar y adjuntar archivo
+    if ($archivo && $archivo['error'] === UPLOAD_ERR_OK) {
+        $tmp = $archivo['tmp_name'];
+        $nombreArchivo = $archivo['name'];
+        $ext = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
 
-    // Validación y adjunto
-    $archivoAdjuntado = false;
-    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
-        $mail->addAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
-        $archivoAdjuntado = true;
-    }
+        if ($ext !== 'pdf') {
+            echo json_encode(['response' => 'error', 'message' => 'Solo se permiten archivos PDF.']);
+            exit;
+        }
 
-    // Contenido del mensaje
-    $mail->isHTML(false);
-    $mail->Subject = "Formulario Web: $asunto";
-    $mail->Body =
-        "Nombre: $nombre\n" .
-        "Correo: $email\n" .
-        "Teléfono: $telefono\n\n" .
-        "Mensaje:\n$mensaje\n\n" .
-        ($archivoAdjuntado ? "Se adjuntó un archivo: " . $_FILES['file']['name'] : "No se adjuntó ningún archivo.");
+        if ($archivo['size'] > 2 * 1024 * 1024) {
+            echo json_encode(['response' => 'error', 'message' => 'Archivo demasiado grande (máx 2MB).']);
+            exit;
+        }
 
-    // Enviar mensaje
-    $mail->send();
-
-    // Confirmación
-    echo '¡El mensaje se envió correctamente!';
-    if ($archivoAdjuntado) {
-        echo ' El archivo "' . $_FILES['file']['name'] . '" fue adjuntado.';
+        $mail->addAttachment($tmp, $nombreArchivo);
     } else {
-        echo ' No se adjuntó ningún archivo.';
+        echo json_encode(['response' => 'error', 'message' => 'Error al subir el archivo.']);
+        exit;
     }
 
+    // Enviar
+    $mail->send();
+    echo json_encode(['response' => 'success', 'message' => 'Mensaje enviado con éxito.']);
 } catch (Exception $e) {
-    echo 'Hubo un error al enviar el mensaje: ' . $mail->ErrorInfo;
+    echo json_encode(['response' => 'error', 'message' => 'Error al enviar: ' . $mail->ErrorInfo]);
 }
+?>
