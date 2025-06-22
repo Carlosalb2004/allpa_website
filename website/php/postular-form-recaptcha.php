@@ -21,9 +21,9 @@ $correo    = $_POST['email'] ?? '';
 $telefono  = $_POST['phone'] ?? '';
 $puesto    = $_POST['puesto'] ?? '';
 $archivo   = $_FILES['attachment'] ?? null;
-
+/*
 // Validar reCAPTCHA
-$recaptchaSecret = '6Lfg5mcrAAAAAF3dDczIttN-NZxsuxj15MbazUBd';
+$recaptchaSecret = '6Ldz_GkrAAAAALFDNf8NpvQO5grNii0LA-_DN2F_';
 $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 
 if (empty($recaptchaResponse)) {
@@ -38,6 +38,33 @@ if (!$captchaSuccess->success) {
     echo json_encode(['response' => 'error', 'message' => 'reCAPTCHA inválido. Intenta de nuevo.']);
     exit;
 }
+*/
+
+// Validar reCAPTCHA
+$recaptchaSecret = '6Lfg5mcrAAAAAF3dDczIttN-NZxsuxj15MbazUBd';
+$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+
+if (empty($recaptchaResponse)) {
+    echo json_encode(['response' => 'error', 'message' => 'Por favor, completa el reCAPTCHA.']);
+    exit;
+}
+/*
+// Opción 1: usando file_get_contents (requiere allow_url_fopen habilitado)
+$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+$captchaSuccess = json_decode($verify);
+*/
+// Opción 2: usando cURL (recomendado si file_get_contents falla)
+
+$ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, [
+    'secret'   => $recaptchaSecret,
+    'response' => $recaptchaResponse
+]);
+$response = curl_exec($ch);
+curl_close($ch);
+$captchaSuccess = json_decode($response);
+
 
 // Validación básica
 if (!$nombre || !$apellido || !$correo || !$telefono || !$puesto) {
@@ -78,12 +105,12 @@ try {
 			echo json_encode(['response' => 'error', 'message' => 'Solo se permiten archivos PDF.']);
 			exit;
 		}
-
-		if ($archivo['size'] > 2 * 1024 * 1024) {
+/*
+		if ($archivo['size'] > 50 * 1024 * 1024) {
 			echo json_encode(['response' => 'error', 'message' => 'Archivo demasiado grande (máx 2MB).']);
 			exit;
 		}
-
+*/
 		$mail->addAttachment($tmp, $nombreArchivo);
 	} else {
 		echo json_encode(['response' => 'error', 'message' => 'Error al subir el archivo.']);
