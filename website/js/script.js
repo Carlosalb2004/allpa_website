@@ -41,7 +41,7 @@ function buscarCodigo() {
 
             // Si no se encuentra el código, mostrar un mensaje de error
             if (!encontrado) {
-                document.getElementById("resultado").innerText = "Código no encontrado en el CSV.";
+                document.getElementById("resultado").innerText = "Código no encontrado, ingresar otro codigo.";
             }
         })
         .catch(error => {

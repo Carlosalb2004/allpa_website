@@ -18,9 +18,13 @@ header('Content-Type: application/json');
 $nombre   = $_POST['nombre'] ?? '';
 $telefono = $_POST['telefono'] ?? '';
 $email    = $_POST['email'] ?? '';
+$entidad = $_POST['entidad'] ?? null;
+$servicio = $_POST['servicio'] ?? '';
 $asunto   = $_POST['asunto'] ?? '';
 $mensaje  = $_POST['mensaje'] ?? '';
 $archivo  = $_FILES['attachment'] ?? null;
+
+
 
 /*
 // Validar reCAPTCHA
@@ -67,7 +71,7 @@ curl_close($ch);
 $captchaSuccess = json_decode($response);
 
 // Validación de campos obligatorios
-if (!$nombre || !$telefono || !$email || !$asunto || !$mensaje) {
+if (!$nombre || !$telefono || !$email || !$servicio || !$asunto || !$mensaje) {
     echo json_encode(['response' => 'error', 'message' => 'Todos los campos son obligatorios.']);
     exit;
 }
@@ -79,7 +83,10 @@ $cuerpoMensaje = <<<EOT
 Nombre: $nombre
 Teléfono: $telefono
 Correo: $email
+Entidad/Empresa: $entidad
+Servicio: $servicio
 Asunto: $asunto
+
 
 Mensaje:
 $mensaje

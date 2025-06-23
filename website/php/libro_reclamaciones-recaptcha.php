@@ -27,6 +27,7 @@ $otros       = $_POST['otros']      ?? '';
 $description = $_POST['description']?? '';
 $namerec     = $_POST['namerec']    ?? '';
 $arearec     = $_POST['arearec']    ?? '';
+$archivo  = $_FILES['attachment'] ?? null;
 
 /*
 // Validar reCAPTCHA
@@ -104,6 +105,26 @@ try {
     $mail->Subject = $asunto;
     $mail->Body    = $contenido;
     $mail->isHTML(true);
+
+    // Validar y adjuntar archivo (solo si fue enviado)
+if ($archivo && $archivo['error'] === UPLOAD_ERR_OK) {
+    $tmp = $archivo['tmp_name'];
+    $nombreArchivo = $archivo['name'];
+    $ext = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
+
+    if ($ext !== 'pdf') {
+        echo json_encode(['response' => 'error', 'message' => 'Solo se permiten archivos PDF.']);
+        exit;
+    }
+
+    if ($archivo['size'] > 25 * 1024 * 1024) {
+        echo json_encode(['response' => 'error', 'message' => 'Archivo demasiado grande (máx 25MB).']);
+        exit;
+    }
+
+    $mail->addAttachment($tmp, $nombreArchivo);
+}
+
 
     $mail->send();
     echo json_encode(['response' => 'success', 'message' => 'Reclamo enviado con éxito.']);

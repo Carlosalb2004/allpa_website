@@ -168,7 +168,7 @@
 				data-sticky-width="120"
 				data-sticky-height="55"
 				data-sticky-top="0"
-				style="max-height: 55px; object-fit: contain;">
+				style="max-height: 58px; object-fit: contain;">
 		</a>
 	</div>
 </div>
@@ -253,13 +253,13 @@
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Nombre Completo</label>
 										<input type="text" value="" data-msg-required="Por favor ingrese su nombre completo." maxlength="100" 
-											placeholder="Juan Alberto Gomez Ortiz" class="form-control text-3 h-auto py-2" name="nombre" required 
+											placeholder="Nombres y Apellidos" class="form-control text-3 h-auto py-2" name="nombre" required 
 											oninput="validateNameInput(this)">
 									</div>
 									
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Teléfono</label>
-										<input type="tel" value="" data-msg-required="Por favor ingrese su número telefónico." placeholder="+51987654321" maxlength="15" 
+										<input type="tel" value="" data-msg-required="Por favor ingrese su número telefónico." placeholder="+51" maxlength="15" 
 											class="form-control text-3 h-auto py-2" name="telefono" required 
 											oninput="validatePhoneInput(this)">
 									</div>
@@ -274,6 +274,38 @@
 											oninput="validateEmailInput(this)">
 									</div>
 								</div>
+
+								<div class="row">
+									<div class="form-group col">
+										<label class="form-label mb-1 text-2">Entidad o Empresa (Opcional)</label>
+										<input type="text" value="" data-msg-required="Por favor ingrese su asunto" maxlength="100" 
+											class="form-control text-3 h-auto py-2" name="entidad" 
+											oninput="validateSubjectInput(this)">
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="form-group col">
+										<label class="form-label mb-1 text-2">Servicio</label>
+										<select name="servicio" class="form-control text-3 h-auto py-2" required>
+											<option value="" disabled selected>Seleccione un servicio</option>
+											<option value="monitoreo">Monitoreos Ambientales</option>
+											<option value="saneamiento">Saneamiento Ambiental</option>
+											<option value="estudios">Estudios Ambientales</option>
+											<option value="biologicos">Estudios y Monitoreos Biológicos</option>
+											<option value="modelamientos">Modelamientos Ambientales</option>
+											<option value="gestion">Instrumentos de Gestión Ambiental</option>
+											<option value="participacion">Participación Ciudadana</option>
+											<option value="sig">Sistema Integrado de Gestión</option>
+											<option value="capacitaciones">Capacitaciones Ambientales</option>
+											<option value="fiscalizacion">Fiscalización Ambiental</option>
+											<option value="proyectos">Elaboración y Ejecución de Proyectos</option>
+											<option value="otros">Otros</option>
+										</select>
+									</div>
+								</div>
+
+
 
 								<div class="row">
 									<div class="form-group col">
@@ -332,8 +364,9 @@
 
 			
 									function validateMessageInput(input) {
-										input.value = input.value.replace(/[^A-Za-z0-9\s\-\.\,\"]+/g, '');
+										input.value = input.value.replace(/[^A-Za-z0-9\s\-\.,\"áéíóúÁÉÍÓÚñÑ]/g, '');
 									}
+
 
 			
 									function validateEmailInput(input) {
@@ -351,7 +384,7 @@
 						<div class="col-lg-6">
 
 							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
-								<h4 class="mt-2 mb-1"><strong> Nuestras Sedes</strong></h4>
+								<h4 class="mt-2 mb-1"><strong> Nos Ubicamos</strong></h4>
 								<ul class="list list-icons list-icons-style-2 mt-2">
 									<li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Dirección:</strong> Av. Salaverry 507 URB. Cerro Salaverry, Socabaya - Arequipa - Perú</li>
 									<li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Telefono:</strong> +51 950 707 731</li>
@@ -364,7 +397,6 @@
 								<ul class="list list-icons list-dark mt-2">
 									<li><i class="far fa-clock top-6"></i> Lun a Vie: 8:00am - 5:30pm</li>
 									<li><i class="far fa-clock top-6"></i> Sábado: 8:00am - 1:30pm</li>
-									<li><i class="far fa-clock top-6"></i> Domingos - Cerrado</li>
 								</ul>
 							</div>
 <!--
@@ -427,7 +459,7 @@
 
 						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">
 							
-							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 px-xl-4 mx-lg-5">
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0">
 								
 								<div class="feature-box-info ps-1">
 									
@@ -435,7 +467,7 @@
 								</div>
 							</div>
 							
-							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 px-xl-4 mx-lg-5">
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0">
 								<div class="feature-box-icon">
 									<i class="icon-call-out icons fa-fade text-color-light"></i>
 									
@@ -450,7 +482,7 @@
 								</div>
 							</div>
 
-							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 px-xl-4 mx-lg-5">
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0">
 								<div class="feature-box-icon">
 									<i class="fa-brands fa-whatsapp fa-fade text-color-light"></i>
 								</div>
@@ -464,7 +496,7 @@
 								</div>
 							</div>
 							
-							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0 px-xl-4 mx-lg-5">
+							<div class="feature-box feature-box-style-2 d-block d-lg-flex mb-4 mb-lg-0">
 								<div class="feature-box-icon">
 									<i class="icon-envelope-open icons fa-fade text-color-light"></i>
 									
