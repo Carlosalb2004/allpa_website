@@ -2,23 +2,18 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// Mostrar errores (útil en desarrollo)
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+// Incluir PHPMailer
 require 'php-mailer/src/PHPMailer.php';
 require 'php-mailer/src/SMTP.php';
 require 'php-mailer/src/Exception.php';
 
+// Devolver respuesta JSON
 header('Content-Type: application/json');
 
-// RECAPTCHA
-$recaptchaSecret = '6Lfg5mcrAAAAAF3dDczIttN-NZxsuxj15MbazUBd'; // ← tu clave secreta
-$recaptchaResponse = $_POST['g-recaptcha-response'];
-
-$recaptcha = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
-$recaptcha = json_decode($recaptcha);
-
-if (!$recaptcha->success) {
-    echo json_encode(['response' => 'error', 'message' => 'Error de validación reCAPTCHA.']);
-    exit;
-}
 
 // DATOS DEL FORMULARIO
 $service     = $_POST['service']    ?? '';
@@ -32,6 +27,50 @@ $otros       = $_POST['otros']      ?? '';
 $description = $_POST['description']?? '';
 $namerec     = $_POST['namerec']    ?? '';
 $arearec     = $_POST['arearec']    ?? '';
+
+/*
+// Validar reCAPTCHA
+$recaptchaSecret = '6Ldz_GkrAAAAALFDNf8NpvQO5grNii0LA-_DN2F_';
+$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+
+if (empty($recaptchaResponse)) {
+    echo json_encode(['response' => 'error', 'message' => 'Por favor, completa el reCAPTCHA.']);
+    exit;
+}
+
+$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+$captchaSuccess = json_decode($verify);
+
+if (!$captchaSuccess->success) {
+    echo json_encode(['response' => 'error', 'message' => 'reCAPTCHA inválido. Intenta de nuevo.']);
+    exit;
+}
+*/
+
+// Validar reCAPTCHA
+$recaptchaSecret = '6Lfg5mcrAAAAAF3dDczIttN-NZxsuxj15MbazUBd';
+$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+
+if (empty($recaptchaResponse)) {
+    echo json_encode(['response' => 'error', 'message' => 'Por favor, completa el reCAPTCHA.']);
+    exit;
+}
+/*
+// Opción 1: usando file_get_contents (requiere allow_url_fopen habilitado)
+$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+$captchaSuccess = json_decode($verify);
+*/
+// Opción 2: usando cURL (recomendado si file_get_contents falla)
+
+$ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, [
+    'secret'   => $recaptchaSecret,
+    'response' => $recaptchaResponse
+]);
+$response = curl_exec($ch);
+curl_close($ch);
+$captchaSuccess = json_decode($response);
 
 // DESTINATARIO
 $destinatario = 'pruebas3@allpasac.com'; // ← Cambia si es necesario

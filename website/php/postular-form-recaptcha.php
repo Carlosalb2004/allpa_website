@@ -105,12 +105,12 @@ try {
 			echo json_encode(['response' => 'error', 'message' => 'Solo se permiten archivos PDF.']);
 			exit;
 		}
-/*
-		if ($archivo['size'] > 50 * 1024 * 1024) {
-			echo json_encode(['response' => 'error', 'message' => 'Archivo demasiado grande (máx 2MB).']);
+
+		if ($archivo['size'] > 25 * 1024 * 1024) {
+			echo json_encode(['response' => 'error', 'message' => 'Archivo demasiado grande (máx 25MB).']);
 			exit;
 		}
-*/
+
 		$mail->addAttachment($tmp, $nombreArchivo);
 	} else {
 		echo json_encode(['response' => 'error', 'message' => 'Error al subir el archivo.']);
