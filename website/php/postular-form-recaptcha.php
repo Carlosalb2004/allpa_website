@@ -21,6 +21,11 @@ $correo    = $_POST['email'] ?? '';
 $telefono  = $_POST['phone'] ?? '';
 $puesto    = $_POST['puesto'] ?? '';
 $archivo   = $_FILES['attachment'] ?? null;
+
+// Obtener fecha y hora actuales
+$fecha = date("d/m/Y");   
+$hora = date("H:i:s");
+
 /*
 // Validar reCAPTCHA
 $recaptchaSecret = '6Ldz_GkrAAAAALFDNf8NpvQO5grNii0LA-_DN2F_';
@@ -76,11 +81,16 @@ if (!$nombre || !$apellido || !$correo || !$telefono || !$puesto) {
 $destinatario = 'pruebas3@allpasac.com';  // ← Cámbialo si es necesario
 $asunto = "Postulación de $nombre $apellido";
 $mensaje = <<<EOT
-Nombres: $nombre
-Apellidos: $apellido
-Correo: $correo
-Teléfono: $telefono
-Puesto: $puesto
+
+<strong>Fecha:</strong> $fecha
+<strong>Hora:</strong> $hora
+<strong>------------------------------------------------------</strong>
+
+<strong>Nombres:</strong> $nombre
+<strong>Apellidos:</strong> $apellido
+<strong>Correo:</strong> $correo
+<strong>Teléfono:</strong> $telefono
+<strong>Puesto:</strong> $puesto
 EOT;
 
 $mail = new PHPMailer(true);

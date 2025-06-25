@@ -24,7 +24,9 @@ $asunto   = $_POST['asunto'] ?? '';
 $mensaje  = $_POST['mensaje'] ?? '';
 $archivo  = $_FILES['attachment'] ?? null;
 
-
+// Obtener fecha y hora actuales
+$fecha = date("d/m/Y");   
+$hora = date("H:i:s");
 
 /*
 // Validar reCAPTCHA
@@ -80,15 +82,20 @@ if (!$nombre || !$telefono || !$email || !$servicio || !$asunto || !$mensaje) {
 $destinatario = 'pruebas3@allpasac.com'; // Cambiar a destino real
 $asuntoCorreo = "Mensaje de Contacto: $asunto";
 $cuerpoMensaje = <<<EOT
-Nombre: $nombre
-Teléfono: $telefono
-Correo: $email
-Entidad/Empresa: $entidad
-Servicio: $servicio
-Asunto: $asunto
+
+<strong>Fecha:</strong> $fecha
+<strong>Hora:</strong> $hora
+<strong>------------------------------------------------------</strong>
+
+<strong>Nombre:</strong> $nombre
+<strong>Teléfono:</strong> $telefono
+<strong>Correo:</strong> $email
+<strong>Entidad/Empresa:</strong> $entidad
+<strong>Servicio:</strong> $servicio
+<strong>Asunto:</strong> $asunto
 
 
-Mensaje:
+<strong>Mensaje:</strong> 
 $mensaje
 EOT;
 
@@ -121,11 +128,14 @@ try {
         }
 
         $mail->addAttachment($tmp, $nombreArchivo);
-    } else {
+    } 
+    //ARCHIVO OBLIGATORIO
+    /*
+    else {
         echo json_encode(['response' => 'error', 'message' => 'Error al subir el archivo.']);
         exit;
     }
-
+*/
     // Enviar
     $mail->send();
     echo json_encode(['response' => 'success', 'message' => 'Mensaje enviado con éxito.']);

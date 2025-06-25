@@ -25,9 +25,11 @@ $email       = $_POST['email']      ?? '';
 $radios      = $_POST['radios']     ?? '';
 $otros       = $_POST['otros']      ?? '';
 $description = $_POST['description']?? '';
-$namerec     = $_POST['namerec']    ?? '';
-$arearec     = $_POST['arearec']    ?? '';
 $archivo  = $_FILES['attachment'] ?? null;
+
+// Obtener fecha y hora actuales
+$fecha = date("d/m/Y");   
+$hora = date("H:i:s");
 
 /*
 // Validar reCAPTCHA
@@ -80,18 +82,24 @@ $destinatario = 'pruebas3@allpasac.com'; // ← Cambia si es necesario
 $tipoReclamo = $_POST['radios'];
 $asunto = "Nuevo Reclamo desde el Libro de Reclamaciones - $tipoReclamo";
 
+// Si se ha seleccionado "Otros", incluir el campo "otros" en el mensaje
+$otrosInfo = ($radios === 'Otros' && !empty($otros)) ? "<strong>OTROS SERVICIOS:</strong> $otros<br>" : "";
+
+
 $contenido = "
 <strong>PROYECTO/SERVICIO:</strong> $service<br>
+<strong>FECHA DE REGISTRO:</strong> $fecha<br>
+<strong>HORA DE REGISTRO:</strong> $hora<br><br>
+<strong>------------------------------------------------------</strong><br><br>
+
 <strong>TELÉFONO:</strong> $phone<br>
 <strong>CLIENTE:</strong> $name<br>
 <strong>DIRECCIÓN:</strong> $adress<br>
 <strong>CONTACTO:</strong> $cellphone<br>
 <strong>E-MAIL:</strong> $email<br>
 <strong>TIPO DE RECLAMO:</strong> $radios<br>
-<strong>OTROS:</strong> $otros<br>
+$otrosInfo
 <strong>DESCRIPCIÓN DEL RECLAMO:</strong><br>$description<br><br>
-<strong>NOMBRE DEL RESPONSABLE:</strong> $namerec<br>
-<strong>ÁREA:</strong> $arearec<br>
 ";
 
 $mail = new PHPMailer(true);
